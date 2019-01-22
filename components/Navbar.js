@@ -49,29 +49,37 @@ const NavbarButton = ({ label, active, path }) => {
   );
 };
 
+const NavbarButtons = ({ pathname }) => (
+  <div style={{ display: "flex", justifyContent: "space-between", padding: 8 }}>
+    {navbarRoutes.map(route => (
+      <NavbarButton
+        key={route.path}
+        path={route.path}
+        label={route.label}
+        active={pathname === route.path || pathname === route.extraPath}
+      />
+    ))}
+  </div>
+);
+
+const NavbarSeparator = () => (
+  <div style={{ display: "flex", justifyContent: "center" }}>
+    <div
+      style={{
+        height: 1,
+        marginTop: 1,
+        backgroundImage:
+          "linear-gradient(to right, #ffffff00, black, #ffffff00)",
+        width: "90%"
+      }}
+    />
+  </div>
+);
+
 const Navbar = ({ pathname }) => (
   <React.Fragment>
-    <div style={{ display: "flex", justifyContent: "space-between", padding: 8 }}>
-      {navbarRoutes.map(route => (
-        <NavbarButton
-          key={route.path}
-          path={route.path}
-          label={route.label}
-          active={pathname === route.path || pathname === route.extraPath}
-        />
-      ))}
-    </div>
-    <div style={{ display: "flex", justifyContent: "center" }}>
-      <div
-        style={{
-          height: 1,
-          marginTop: 1,
-          backgroundImage:
-            "linear-gradient(to right, #ffffff00, black, #ffffff00)",
-          width: "90%"
-        }}
-      />
-    </div>
+    <NavbarButtons pathname={pathname} />
+    <NavbarSeparator />
   </React.Fragment>
 );
 
