@@ -39,12 +39,10 @@ const NavbarButton = ({ label, active, path }) => {
           transition: 500ms;
         }
         .not-active:hover {
-          background-color: #c6c6c6;
-          color: white;
+          background-color: #0000003d;
         }
         .active {
-          background-color: #c6c6c6;
-          color: white;
+          background-color: #0000003d;
         }
       `}</style>
     </div>
@@ -69,7 +67,7 @@ const Navbar = ({ pathname }) => (
           height: 1,
           marginTop: 1,
           backgroundImage:
-            "linear-gradient(to right, #ffffff00, #6d6d6d, #ffffff00)",
+            "linear-gradient(to right, #ffffff00, black, #ffffff00)",
           width: "90%"
         }}
       />

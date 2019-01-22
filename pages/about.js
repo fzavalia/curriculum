@@ -17,7 +17,7 @@ const AboutPage = ({ pathname }) => {
       >
         <img
           style={{ height: 250, boxShadow: "0 0 5px 0 dimgrey" }}
-          src={"/static/img/portrait.jpg"}
+          src={"/static/img/portrait.jpeg"}
         />
         <span
           style={{
