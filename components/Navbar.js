@@ -69,7 +69,7 @@ const NavbarSeparator = () => (
         height: 1,
         marginTop: 1,
         backgroundImage:
-          "linear-gradient(to right, #ffffff00, black, #ffffff00)",
+          "linear-gradient(to right, #ffffff00, white, #ffffff00)",
         width: "90%"
       }}
     />

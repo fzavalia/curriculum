@@ -14,7 +14,7 @@ const Portrait = () => (
       boxShadow: "0 0 10px 0 #313131",
       borderRadius: "50%"
     }}
-    src={"/static/img/portrait.jpeg"}
+    src={"/static/img/portrait.jpg"}
   />
 );
 
@@ -33,11 +33,16 @@ const SmallDescription = () => (
   <span
     style={{
       fontSize: 14,
-      color: constants.colors.text.default
+      color: constants.colors.text.default,
+      width: "80%",
+      textAlign: "center"
     }}
   >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In fermentum, massa
-    at iaculis posuere
+    <i>
+      "We build our computer (systems) the way we build our cities: over time,
+      without a plan, on top of ruins."
+    </i>{" "}
+    - Ellen Ullman
   </span>
 );
 
@@ -46,7 +51,8 @@ const LongDescription = () => (
     style={{
       fontSize: 14,
       color: constants.colors.text.default,
-      width: "80%"
+      width: "80%",
+      textAlign: "justify"
     }}
   >
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. In fermentum, massa
@@ -76,7 +82,7 @@ const AboutPage = ({ pathname }) => {
           flexDirection: "column"
         }}
       >
-        <Sep amount={80} />
+        <Sep amount={40} />
         <Portrait />
         <Sep amount={40} />
         <Name />
@@ -84,6 +90,7 @@ const AboutPage = ({ pathname }) => {
         <SmallDescription />
         <Sep amount={40} />
         <LongDescription />
+        <Sep amount={40} />
       </div>
     </Layout>
   );
