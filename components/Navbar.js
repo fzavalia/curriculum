@@ -5,7 +5,7 @@ import * as constants from "../utils/constants";
 
 const navbarRoutes = [
   { path: "/about", extraPath: "/", label: "About" },
-  { path: "/experience", label: "Experience" },
+  { path: "/career", label: "Career" },
   { path: "/tech", label: "Tech" },
   { path: "/portfolio", label: "Portfolio" }
 ];
@@ -14,7 +14,7 @@ const NavbarButtonArrow = () => (
   <div
     style={{
       position: "absolute",
-      width: "90%",
+      width: "95%",
       display: "flex",
       justifyContent: "center"
     }}
@@ -42,7 +42,7 @@ const NavbarButton = ({ label, active, path }) => {
       </Link>
       <style jsx>{`
         .button {
-          width: 90%;
+          width: 95%;
           height: 25px;
           display: flex;
           align-items: center;
@@ -55,10 +55,10 @@ const NavbarButton = ({ label, active, path }) => {
           transition: 500ms;
         }
         .not-active:hover {
-          background-color: #0000003d;
+          background-color: #ffffff1c;
         }
         .active {
-          background-color: #0000003d;
+          background-color: #ffffff1c;
         }
       `}</style>
       {active && <NavbarButtonArrow />}

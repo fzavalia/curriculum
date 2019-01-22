@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Layout from "../components/Layout";
 
-const ExperiencePage = ({ pathname }) => {
+const CareerPage = ({ pathname }) => {
   return (
     <Layout section='Experience'>
       <Navbar pathname={pathname} />
@@ -10,6 +10,6 @@ const ExperiencePage = ({ pathname }) => {
   );
 };
 
-ExperiencePage.getInitialProps = ({ pathname }) => ({ pathname });
+CareerPage.getInitialProps = ({ pathname }) => ({ pathname });
 
-export default ExperiencePage;
+export default CareerPage;
