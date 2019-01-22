@@ -1,13 +1,8 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 import Layout from "../components/Layout";
 
 const CareerPage = ({ pathname }) => {
-  return (
-    <Layout section='Experience'>
-      <Navbar pathname={pathname} />
-    </Layout>
-  );
+  return <Layout section="Experience" pathname={pathname} />;
 };
 
 CareerPage.getInitialProps = ({ pathname }) => ({ pathname });

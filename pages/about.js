@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 import Layout from "../components/Layout";
 import * as constants from "../utils/constants";
 
@@ -92,8 +91,7 @@ const FadeIn = ({ children }) => (
 
 const AboutPage = ({ pathname }) => {
   return (
-    <Layout section="About">
-      <Navbar pathname={pathname} />
+    <Layout section="About" pathname={pathname}>
       <FadeIn>
         <div
           style={{

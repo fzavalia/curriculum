@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Navbar from "./Navbar";
 
 const CustomHead = ({ section }) => (
   <Head>
@@ -61,12 +62,15 @@ const Content = ({ children }) => (
   </div>
 );
 
-export default ({ section, children }) => (
+export default ({ section, children, pathname }) => (
   <React.Fragment>
     <CustomHead section={section} />
     <BGImage />
     <BGImageCover />
     <GlobalStyles />
-    <Content>{children}</Content>
+    <Content>
+      <Navbar pathname={pathname} />
+      {children}
+    </Content>
   </React.Fragment>
 );

@@ -1,13 +1,8 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 import Layout from "../components/Layout";
 
 const PortfolioPage = ({ pathname }) => {
-  return (
-    <Layout section='Portfolio'>
-      <Navbar pathname={pathname} />
-    </Layout>
-  );
+  return <Layout section="Portfolio" pathname={pathname} />;
 };
 
 PortfolioPage.getInitialProps = ({ pathname }) => ({ pathname });
