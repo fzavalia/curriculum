@@ -13,13 +13,12 @@ const CustomHead = ({ section }) => (
 
 const BGImage = () => (
   <React.Fragment>
-    <div className="bg-image" />
+    <div />
     <style jsx>{`
-      .bg-image {
+      div {
         position: fixed;
         background-image: url("/static/img/bg.jpg");
         filter: blur(8px);
-        -webkit-filter: blur(8px);
         height: 100%;
         width: 100%;
         background-position: center;
@@ -33,13 +32,13 @@ const BGImage = () => (
 
 const BGImageCover = () => (
   <React.Fragment>
-    <div className="bg-image-cover" />
+    <div />
     <style jsx>{`
-      .bg-image-cover {
+      div {
         position: fixed;
         height: 100%;
         width: 100%;
-        background: rgba(0, 0, 0, 0.3); /*can be anything, of course*/
+        background: rgba(0, 0, 0, 0.3);
       }
     `}</style>
   </React.Fragment>
