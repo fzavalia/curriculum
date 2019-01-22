@@ -4,7 +4,7 @@ import * as constants from "../utils/constants";
 import Separator from "../components/Separator";
 
 const Element = ({ image, name, dates, description }) => (
-  <div style={{ width: "90%", maxWidth: 700, display: "flex" }}>
+  <div style={{ display: "flex" }}>
     <img src={image} />
     <style jsx>{`
       img {

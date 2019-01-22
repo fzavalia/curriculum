@@ -85,7 +85,7 @@ const NavbarSeparator = () => (
       style={{
         height: 1,
         marginTop: 1,
-        backgroundColor: 'white',
+        backgroundColor: "white",
         width: "90%"
       }}
     />
@@ -93,10 +93,10 @@ const NavbarSeparator = () => (
 );
 
 const Navbar = ({ pathname }) => (
-  <React.Fragment>
+  <div style={{ position: "fixed", width: "100%", zIndex: 5 }}>
     <NavbarButtons pathname={pathname} />
     <NavbarSeparator />
-  </React.Fragment>
+  </div>
 );
 
 export default Navbar;

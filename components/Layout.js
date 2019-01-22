@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Navbar from "./Navbar";
 import FadeIn from "./FadeIn";
+import Separator from "./Separator";
 
 const CustomHead = ({ section }) => (
   <Head>
@@ -71,7 +72,12 @@ export default ({ section, children, pathname }) => (
     <GlobalStyles />
     <Content>
       <Navbar pathname={pathname} />
-      <FadeIn>{children}</FadeIn>
+      <Separator.Space amount={40} />
+      <FadeIn>
+        <div style={{ width: "90%", maxWidth: 700, margin: "auto" }}>
+          {children}
+        </div>
+      </FadeIn>
     </Content>
   </React.Fragment>
 );
