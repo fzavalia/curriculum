@@ -19,7 +19,7 @@ const BGImage = () => (
     <style jsx>{`
       div {
         position: fixed;
-        background-image: url("/static/img/bg.jpg");
+        background-image: url("/static/img/app/bg.jpg");
         filter: blur(8px);
         height: 100%;
         width: 100%;

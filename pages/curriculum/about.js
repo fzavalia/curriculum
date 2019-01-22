@@ -1,7 +1,7 @@
 import React from "react";
-import Layout from "../components/Layout";
-import * as constants from "../utils/constants";
-import Separator from "../components/Separator";
+import Layout from "../../components/Layout";
+import * as constants from "../../utils/constants";
+import Separator from "../../components/Separator";
 
 const Portrait = () => (
   <img
@@ -12,7 +12,7 @@ const Portrait = () => (
       boxShadow: "0 0 10px 0 #313131",
       borderRadius: "50%"
     }}
-    src={"/static/img/portrait.jpg"}
+    src={"/static/img/about/portrait.jpg"}
   />
 );
 

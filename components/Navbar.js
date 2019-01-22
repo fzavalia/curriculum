@@ -4,10 +4,10 @@ import classNames from "classnames";
 import * as constants from "../utils/constants";
 
 const navbarRoutes = [
-  { path: "/about", extraPath: "/", label: "About" },
-  { path: "/career", label: "Career" },
-  { path: "/tech", label: "Tech" },
-  { path: "/portfolio", label: "Portfolio" }
+  { path: "/curriculum/about", extraPath: "/", label: "About" },
+  { path: "/curriculum/career", label: "Career" },
+  { path: "/curriculum/tech", label: "Tech" },
+  { path: "/curriculum/portfolio", label: "Portfolio" }
 ];
 
 const NavbarButtonArrow = () => (
@@ -21,7 +21,7 @@ const NavbarButtonArrow = () => (
   >
     <img
       style={{ width: 25, height: 25, filter: "invert(1)" }}
-      src={"/static/img/triangle.png"}
+      src={"/static/img/app/triangle.png"}
     />
   </div>
 );

@@ -1,7 +1,7 @@
 import React from "react";
-import Layout from "../components/Layout";
-import * as constants from "../utils/constants";
-import Separator from "../components/Separator";
+import Layout from "../../components/Layout";
+import * as constants from "../../utils/constants";
+import Separator from "../../components/Separator";
 
 const Element = ({ image, name, dates, description }) => (
   <div style={{ width: "90%", maxWidth: 700, display: "flex" }}>
@@ -53,7 +53,7 @@ const CareerPage = ({ pathname }) => {
       >
         <Separator.Space amount={60} />
         <Element
-          image="/static/img/etermax.png"
+          image="/static/img/career/etermax.png"
           name="Etermax"
           dates="20/10/93 - Today"
           description="Suspendisse est
@@ -63,7 +63,7 @@ const CareerPage = ({ pathname }) => {
         />
         <Separator.Line amount={40} />
         <Element
-          image="/static/img/etermax.png"
+          image="/static/img/career/etermax.png"
           name="Etermax"
           dates="20/10/93 - Today"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
@@ -71,7 +71,7 @@ const CareerPage = ({ pathname }) => {
         />
         <Separator.Line amount={40} />
         <Element
-          image="/static/img/etermax.png"
+          image="/static/img/career/etermax.png"
           name="Etermax"
           dates="20/10/93 - Today"
           description="Orci varius natoque penatibus et magnis
@@ -82,7 +82,7 @@ const CareerPage = ({ pathname }) => {
         />
         <Separator.Line amount={40} />
         <Element
-          image="/static/img/etermax.png"
+          image="/static/img/career/etermax.png"
           name="Etermax"
           dates="20/10/93 - Today"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
