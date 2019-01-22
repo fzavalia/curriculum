@@ -10,9 +10,25 @@ const navbarRoutes = [
   { path: "/portfolio", label: "Portfolio" }
 ];
 
+const NavbarButtonArrow = () => (
+  <div
+    style={{
+      position: "absolute",
+      width: "90%",
+      display: "flex",
+      justifyContent: "center"
+    }}
+  >
+    <img
+      style={{ width: 25, height: 25, filter: "invert(1)" }}
+      src={"/static/img/triangle.png"}
+    />
+  </div>
+);
+
 const NavbarButton = ({ label, active, path }) => {
   return (
-    <div style={{ flex: 1 }}>
+    <div style={{ flex: 1, position: "relative" }}>
       <Link href={path}>
         <div
           className={classNames(
@@ -45,6 +61,7 @@ const NavbarButton = ({ label, active, path }) => {
           background-color: #0000003d;
         }
       `}</style>
+      {active && <NavbarButtonArrow />}
     </div>
   );
 };
@@ -68,8 +85,7 @@ const NavbarSeparator = () => (
       style={{
         height: 1,
         marginTop: 1,
-        backgroundImage:
-          "linear-gradient(to right, #ffffff00, white, #ffffff00)",
+        backgroundColor: 'white',
         width: "90%"
       }}
     />
