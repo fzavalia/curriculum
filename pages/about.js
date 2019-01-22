@@ -71,27 +71,48 @@ const LongDescription = () => (
   </span>
 );
 
+const FadeIn = ({ children }) => (
+  <React.Fragment>
+    <div>{children}</div>
+    <style jsx>{`
+      div {
+        animation: fadein 1s;
+      }
+      @keyframes fadein {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    `}</style>
+  </React.Fragment>
+);
+
 const AboutPage = ({ pathname }) => {
   return (
     <Layout section="About">
       <Navbar pathname={pathname} />
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          flexDirection: "column"
-        }}
-      >
-        <Sep amount={40} />
-        <Portrait />
-        <Sep amount={40} />
-        <Name />
-        <Sep amount={20} />
-        <SmallDescription />
-        <Sep amount={40} />
-        <LongDescription />
-        <Sep amount={40} />
-      </div>
+      <FadeIn>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            flexDirection: "column"
+          }}
+        >
+          <Sep amount={60} />
+          <Portrait />
+          <Sep amount={40} />
+          <Name />
+          <Sep amount={20} />
+          <SmallDescription />
+          <Sep amount={40} />
+          <LongDescription />
+          <Sep amount={40} />
+        </div>
+      </FadeIn>
     </Layout>
   );
 };
