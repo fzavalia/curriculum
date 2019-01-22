@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/Layout";
 import * as constants from "../utils/constants";
-import Sep from "../components/Sep";
+import Separator from "../components/Separator";
 
 const Portrait = () => (
   <img
@@ -79,15 +79,15 @@ const AboutPage = ({ pathname }) => {
           flexDirection: "column"
         }}
       >
-        <Sep amount={60} />
+        <Separator.Space amount={60} />
         <Portrait />
-        <Sep amount={40} />
+        <Separator.Line amount={60} />
         <Name />
-        <Sep amount={20} />
+        <Separator.Space amount={20} />
         <SmallDescription />
-        <Sep amount={40} />
+        <Separator.Line amount={60} />
         <LongDescription />
-        <Sep amount={40} />
+        <Separator.Space amount={40} />
       </div>
     </Layout>
   );

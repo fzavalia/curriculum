@@ -1,23 +1,7 @@
 import React from "react";
 import Layout from "../components/Layout";
-import Sep from "../components/Sep";
 import * as constants from "../utils/constants";
-
-const SeparatingLine = () => (
-  <React.Fragment>
-    <Sep amount={20} />
-    <div
-      style={{
-        height: 1,
-        width: "90%",
-        maxWidth: 700,
-        backgroundImage:
-          "linear-gradient(to right, #00000000, white, #00000000)"
-      }}
-    />
-    <Sep amount={20} />
-  </React.Fragment>
-);
+import Separator from "../components/Separator";
 
 const Element = ({ image, name, dates, description }) => (
   <div style={{ width: "90%", maxWidth: 700, display: "flex" }}>
@@ -67,7 +51,7 @@ const CareerPage = ({ pathname }) => {
           flexDirection: "column"
         }}
       >
-        <Sep amount={60} />
+        <Separator.Space amount={60} />
         <Element
           image="/static/img/etermax.png"
           name="Etermax"
@@ -77,7 +61,7 @@ const CareerPage = ({ pathname }) => {
               bibendum lacinia nisi, quis interdum leo placerat quis. Aenean ut
               vehicula arcu, ac faucibus mauris."
         />
-        <SeparatingLine />
+        <Separator.Line amount={40} />
         <Element
           image="/static/img/etermax.png"
           name="Etermax"
@@ -85,7 +69,7 @@ const CareerPage = ({ pathname }) => {
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
               venenatis auctor diam eu placerat."
         />
-        <SeparatingLine />
+        <Separator.Line amount={40} />
         <Element
           image="/static/img/etermax.png"
           name="Etermax"
@@ -96,7 +80,7 @@ const CareerPage = ({ pathname }) => {
               bibendum lacinia nisi, quis interdum leo placerat quis. Aenean ut
               vehicula arcu, ac faucibus mauris."
         />
-        <SeparatingLine />
+        <Separator.Line amount={40} />
         <Element
           image="/static/img/etermax.png"
           name="Etermax"
@@ -107,7 +91,7 @@ const CareerPage = ({ pathname }) => {
               volutpat purus. Nunc libero ante, posuere sed aliquet vitae,
               porttitor feugiat odio."
         />
-        <Sep amount={40} />
+        <Separator.Space amount={40} />
       </div>
     </Layout>
   );
