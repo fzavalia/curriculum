@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Navbar from "./Navbar";
+import FadeIn from "./FadeIn";
 
 const CustomHead = ({ section }) => (
   <Head>
@@ -70,7 +71,7 @@ export default ({ section, children, pathname }) => (
     <GlobalStyles />
     <Content>
       <Navbar pathname={pathname} />
-      {children}
+      <FadeIn>{children}</FadeIn>
     </Content>
   </React.Fragment>
 );

@@ -1,0 +1,1 @@
+export default ({ amount }) => <div style={{ marginTop: amount }} />;
