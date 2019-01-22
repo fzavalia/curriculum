@@ -17,8 +17,11 @@ const AboutPage = ({ pathname }) => {
         <img
           style={{
             height: 250,
+            width: 250,
+            objectFit: "cover",
             boxShadow: "0 0 10px 0 #313131",
-            margin: "80px 0 40px 0"
+            margin: "80px 0 40px 0",
+            borderRadius: "50%"
           }}
           src={"/static/img/portrait.jpeg"}
         />
