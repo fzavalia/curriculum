@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Layout from "../components/Layout";
+import * as constants from "../utils/constants";
 
 const AboutPage = ({ pathname }) => {
   return (
@@ -18,7 +19,15 @@ const AboutPage = ({ pathname }) => {
           style={{ height: 250, boxShadow: "0 0 5px 0 dimgrey" }}
           src={"/static/img/portrait.jpg"}
         />
-        <span style={{ marginTop: 80, fontSize: 20 }}>Fernando Alberto Zavalia Paunero</span>
+        <span
+          style={{
+            marginTop: 80,
+            fontSize: 20,
+            color: constants.colors.text.default
+          }}
+        >
+          Fernando Alberto Zavalia Paunero
+        </span>
       </div>
     </Layout>
   );
