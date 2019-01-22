@@ -33,6 +33,7 @@ const SmallDescription = () => (
       fontSize: 14,
       color: constants.colors.text.default,
       width: "80%",
+      maxWidth: 700,
       textAlign: "center"
     }}
   >
@@ -50,6 +51,7 @@ const LongDescription = () => (
       fontSize: 14,
       color: constants.colors.text.default,
       width: "80%",
+      maxWidth: 700,
       textAlign: "justify"
     }}
   >
