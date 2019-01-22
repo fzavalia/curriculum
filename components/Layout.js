@@ -11,9 +11,10 @@ export default ({ section, children }) => (
       />
     </Head>
     <style jsx global>{`
-      body {
-        background: #f2f2f2;
+      body, html {
+        height: 100%;
         font-family: "Roboto", sans-serif;
+        margin: 0;
       }
     `}</style>
     {children}

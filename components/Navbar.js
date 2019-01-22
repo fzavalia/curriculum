@@ -53,7 +53,7 @@ const NavbarButton = ({ label, active, path }) => {
 
 const Navbar = ({ pathname }) => (
   <React.Fragment>
-    <div style={{ display: "flex", justifyContent: "space-between" }}>
+    <div style={{ display: "flex", justifyContent: "space-between", padding: 8 }}>
       {navbarRoutes.map(route => (
         <NavbarButton
           key={route.path}
@@ -67,7 +67,7 @@ const Navbar = ({ pathname }) => (
       <div
         style={{
           height: 1,
-          marginTop: 10,
+          marginTop: 1,
           backgroundImage:
             "linear-gradient(to right, #ffffff00, #6d6d6d, #ffffff00)",
           width: "90%"
