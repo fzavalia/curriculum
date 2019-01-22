@@ -1,7 +1,7 @@
 import React from "react";
-import Layout from "../../components/Layout";
-import * as constants from "../../utils/constants";
-import Separator from "../../components/Separator";
+import Layout from "../components/Layout";
+import * as constants from "../utils/constants";
+import Separator from "../components/Separator";
 
 const Element = ({ image, name, dates, description }) => (
   <div style={{ width: "90%", maxWidth: 700, display: "flex" }}>

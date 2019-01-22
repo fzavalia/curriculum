@@ -1,7 +1,7 @@
 import React from "react";
-import Layout from "../../components/Layout";
-import * as constants from "../../utils/constants";
-import Separator from "../../components/Separator";
+import Layout from "../components/Layout";
+import * as constants from "../utils/constants";
+import Separator from "../components/Separator";
 
 const Portrait = () => (
   <img

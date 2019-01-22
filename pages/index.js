@@ -4,7 +4,7 @@ import Router from "next/router";
 export default class extends Component {
 
   componentDidMount = () => {
-    Router.push("/curriculum/about");
+    Router.push("/about");
   };
   
   render = () => null;

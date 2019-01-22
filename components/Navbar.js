@@ -4,10 +4,10 @@ import classNames from "classnames";
 import * as constants from "../utils/constants";
 
 const navbarRoutes = [
-  { path: "/curriculum/about", extraPath: "/", label: "About" },
-  { path: "/curriculum/career", label: "Career" },
-  { path: "/curriculum/tech", label: "Tech" },
-  { path: "/curriculum/portfolio", label: "Portfolio" }
+  { path: "/about", label: "About" },
+  { path: "/career", label: "Career" },
+  { path: "/tech", label: "Tech" },
+  { path: "/portfolio", label: "Portfolio" }
 ];
 
 const NavbarButtonArrow = () => (
@@ -73,7 +73,7 @@ const NavbarButtons = ({ pathname }) => (
         key={route.path}
         path={route.path}
         label={route.label}
-        active={pathname === route.path || pathname === route.extraPath}
+        active={pathname === route.path}
       />
     ))}
   </div>
