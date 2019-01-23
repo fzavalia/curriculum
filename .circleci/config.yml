@@ -8,6 +8,8 @@ jobs:
       - run:
           name: Build Image
           command: |
+            echo $DOCKER_USERNAME
+            echo $DOCKER_PASSWORD
             docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
             docker build -t $DOCKER_REPOSITORY/curriculum:latest .
             docker push $DOCKER_REPOSITORY/curriculum:latest .
