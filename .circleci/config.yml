@@ -10,5 +10,8 @@ jobs:
           apk add python3 curl
           curl -O https://bootstrap.pypa.io/get-pip.py
           python3 get-pip.py --user
-          ~/.local/bin/pip install awsebcli --upgrade --user
-            
+          export PATH=/root/.local/bin:$PATH
+          pip --version
+          pip install awsebcli --upgrade --user
+          eb --version
+
