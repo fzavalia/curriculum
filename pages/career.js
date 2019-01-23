@@ -56,7 +56,7 @@ const CareerPage = ({ pathname }) => {
         <Element
           image="/static/img/career/flowlike.jpg"
           name="Flowlike"
-          dates="20/10/93 - Today"
+          dates="01/02/18 - Present"
           description={
             <div>
               <span>Lead Front Developer | FullStack</span>

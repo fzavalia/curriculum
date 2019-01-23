@@ -16,7 +16,7 @@ const Element = ({ image, name }) => (
       }}
     >
       <img
-        style={{ width: "100%", maxWidth: 100, borderRadius: "50%" }}
+        style={{ width: "100%", maxWidth: 100 }}
         src={image}
       />
       <div
@@ -56,30 +56,30 @@ const TechPage = ({ pathname }) => {
         <Separator.Space amount={20} />
         <div className="row">
           <Element image="/static/img/tech/js.png" name="JavaScript" />
-          <Element image="/static/img/tech/js.png" name="React" />
-          <Element image="/static/img/tech/js.png" name="Node" />
-          <Element image="/static/img/tech/js.png" name="NextJS" />
-          <Element image="/static/img/tech/js.png" name="PHP" />
-          <Element image="/static/img/tech/js.png" name="Laravel" />
-          <Element image="/static/img/tech/js.png" name="Lumen" />
-          <Element image="/static/img/tech/js.png" name="Docker" />
-          <Element image="/static/img/tech/js.png" name="AWS" />
-          <Element image="/static/img/tech/js.png" name="Gitlab" />
-          <Element image="/static/img/tech/js.png" name="MariaDB" />
+          <Element image="/static/img/tech/react.png" name="React" />
+          <Element image="/static/img/tech/node.png" name="Node" />
+          <Element image="/static/img/tech/nextjs.png" name="NextJS" />
+          <Element image="/static/img/tech/php.png" name="PHP" />
+          <Element image="/static/img/tech/laravel.png" name="Laravel" />
+          <Element image="/static/img/tech/lumen.png" name="Lumen" />
+          <Element image="/static/img/tech/docker.png" name="Docker" />
+          <Element image="/static/img/tech/aws.png" name="AWS" />
+          <Element image="/static/img/tech/gitlab.png" name="Gitlab" />
+          <Element image="/static/img/tech/mariadb.png" name="MariaDB" />
         </div>
         <Separator.Line amount={80} />
         <Title value="Have experience with:" />
         <Separator.Space amount={20} />
         <div className="row">
-          <Element image="/static/img/tech/js.png" name="C#" />
-          <Element image="/static/img/tech/js.png" name="Unity" />
-          <Element image="/static/img/tech/js.png" name="Kotlin" />
-          <Element image="/static/img/tech/js.png" name="Vert.x" />
-          <Element image="/static/img/tech/js.png" name="Java" />
-          <Element image="/static/img/tech/js.png" name="TypeScript" />
-          <Element image="/static/img/tech/js.png" name="Cocos Creator" />
-          <Element image="/static/img/tech/js.png" name="Express" />
-          <Element image="/static/img/tech/js.png" name="MongoDB" />
+          <Element image="/static/img/tech/csharp.png" name="C#" />
+          <Element image="/static/img/tech/unity.png" name="Unity" />
+          <Element image="/static/img/tech/kotlin.svg" name="Kotlin" />
+          <Element image="/static/img/tech/vertx.jpg" name="Vert.x" />
+          <Element image="/static/img/tech/java.png" name="Java" />
+          <Element image="/static/img/tech/ts.png" name="TypeScript" />
+          <Element image="/static/img/tech/cocoscreator.png" name="Cocos Creator" />
+          <Element image="/static/img/tech/express.png" name="Express" />
+          <Element image="/static/img/tech/mongodb.png" name="MongoDB" />
         </div>
       </Layout>
     </React.Fragment>
