@@ -2,8 +2,7 @@ version: 2.0
 environment:
 jobs:
   build:
-    docker:
-      - image: docker:dind
+    machine: true
     steps:
       - checkout
       - run:
