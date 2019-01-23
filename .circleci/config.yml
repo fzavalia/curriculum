@@ -1,13 +1,15 @@
 version: 2.0
 environment:
 jobs:
-  build:
-    machine: true
+  deploy:
+    docker:
+      - image: alpine:3.6
     steps:
       - checkout
-      - run:
-          name: Build Image
-          command: |
-            docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
-            docker build -t $DOCKER_REPOSITORY/curriculum:latest .
-            docker push $DOCKER_REPOSITORY/curriculum:latest
+      - run: |
+        apk add python3 curl
+        curl -O https://bootstrap.pypa.io/get-pip.py
+        python3 get-pip.py --user
+        export PATH="~/.local/bin":$PATH
+        pip install awsebcli --upgrade --user
+            
