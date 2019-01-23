@@ -48,7 +48,7 @@ const TechPage = ({ pathname }) => {
         <link rel="stylesheet" href="/static/css/flexboxgrid.min.css" />
       </Head>
       <Layout section="Tech" pathname={pathname}>
-        <Separator.Space amount={100} />
+        <Separator.Space amount={60} />
         <Title value="Currently working with:" />
         <Separator.Space amount={40} />
         <div className="row">
@@ -81,6 +81,7 @@ const TechPage = ({ pathname }) => {
           <Element image="/static/img/tech/express.png" name="Express" />
           <Element image="/static/img/tech/mongodb.png" name="MongoDB" />
         </div>
+        <Separator.Space amount={60} />
       </Layout>
     </React.Fragment>
   );

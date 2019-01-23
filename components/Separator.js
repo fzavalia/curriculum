@@ -1,6 +1,4 @@
-const Space = ({ amount }) => (
-  <div style={{ marginTop: amount, marginLeft: amount }} />
-);
+const Space = ({ amount }) => <div style={{ height: amount, width: amount }} />;
 
 const Line = ({ amount }) => (
   <React.Fragment>
