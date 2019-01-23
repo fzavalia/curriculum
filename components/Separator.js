@@ -8,7 +8,7 @@ const Line = ({ amount }) => (
     <div
       style={{
         height: 1,
-        width: "90%",
+        width: "100%",
         maxWidth: 700,
         backgroundImage:
           "linear-gradient(to right, #00000000, white, #00000000)"
