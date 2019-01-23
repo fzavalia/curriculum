@@ -7,9 +7,9 @@ jobs:
     steps:
       - checkout
       - run: |
-        apk add python3 curl
-        curl -O https://bootstrap.pypa.io/get-pip.py
-        python3 get-pip.py --user
-        export PATH="~/.local/bin":$PATH
-        pip install awsebcli --upgrade --user
+          apk add python3 curl
+          curl -O https://bootstrap.pypa.io/get-pip.py
+          python3 get-pip.py --user
+          export PATH="~/.local/bin":$PATH
+          pip install awsebcli --upgrade --user
             
