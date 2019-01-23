@@ -44,27 +44,26 @@ const SmallDescription = () => (
 );
 
 const LongDescription = () => (
-  <span
+  <div
     style={{
       fontSize: 14,
       color: constants.colors.text.default,
       textAlign: "justify"
     }}
   >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In fermentum, massa
-    at iaculis posuere, nunc quam rutrum libero, vulputate tristique leo odio
-    sed lorem. Ut sit amet nisi et lorem accumsan sagittis sed at nulla. Integer
-    malesuada lacinia est non rhoncus. Duis ut ultrices magna. Integer eget
-    ultrices tellus. Morbi porta facilisis quam, vitae vestibulum mauris dapibus
-    sed. Curabitur suscipit orci vel quam iaculis convallis. Suspendisse erat
-    turpis, ultricies et est sit amet, rutrum elementum nunc. Etiam pellentesque
-    facilisis massa, id consequat ante ornare et. Integer tempor scelerisque
-    ante, et ultrices orci maximus ac. Suspendisse sit amet tincidunt augue.
-    Proin venenatis lobortis ultrices. Nulla risus orci, bibendum sagittis
-    porttitor ut, sodales ac neque. In ac arcu ac metus tincidunt convallis nec
-    sit amet diam. Aenean efficitur efficitur venenatis. Sed in euismod velit.
-    Duis bibendum tortor turpis, elementum rutrum nunc facilisis et.
-  </span>
+    <p>
+      This is a recurring problem with most of the projects I have had the
+      pleasure to work with. Feature after feature required by the client and
+      not enough dicipline to speak up and foretold the technical debt that will
+      eventually consume it and turn it into the aforementioned ruins.
+    </p>
+    <p>
+      Guiding myself through the teachings of Robert C. Martin, I wish to make
+      Clean Code and good coding practices a must in even small companies by
+      showing developers and PMs the way to not having to maintain ruins
+      anymore, but robust self maintained systems.
+    </p>
+  </div>
 );
 
 const AboutPage = ({ pathname }) => {
