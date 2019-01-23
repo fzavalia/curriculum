@@ -3,7 +3,7 @@ environment:
 jobs:
   build:
     docker:
-      - image: alpine:3.6
+      - image: alpine:3.8
     steps:
       - checkout
       - run: |
