@@ -46,7 +46,7 @@ const SmallDescription = () => (
 const LongDescription = () => (
   <div
     style={{
-      fontSize: 14,
+      fontSize: 16,
       color: constants.colors.text.default,
       textAlign: "justify"
     }}
@@ -63,6 +63,32 @@ const LongDescription = () => (
       showing developers and PMs the way to not having to maintain ruins
       anymore, but robust self maintained systems.
     </p>
+    <p>
+      Up until the moment I can really consider myself a referent of good code.
+      I wish to continue learning from the best developers I can find.
+    </p>
+  </div>
+);
+
+const PersonalDataElement = ({ label, value }) => (
+  <div
+    style={{
+      display: "flex",
+      justifyContent: "space-between"
+    }}
+  >
+    <span>{label}:</span>
+    <span>{value}</span>
+  </div>
+);
+
+const PersonalData = () => (
+  <div style={{ color: constants.colors.text.default, width: "100%" }}>
+    <PersonalDataElement label="Birthday" value="26/10/93" />
+    <Separator.Space amount={10} />
+    <PersonalDataElement label="Marital Status" value="Single" />
+    <Separator.Space amount={10} />
+    <PersonalDataElement label="Nationality" value="Argentinian" />
   </div>
 );
 
@@ -84,6 +110,8 @@ const AboutPage = ({ pathname }) => {
         <SmallDescription />
         <Separator.Line amount={60} />
         <LongDescription />
+        <Separator.Line amount={60} />
+        <PersonalData />
         <Separator.Space amount={40} />
       </div>
     </Layout>
