@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/Layout";
-import * as constants from "../utils/constants";
 import Separator from "../components/Separator";
+import { colors } from "../utils/constants";
 
 const Portrait = () => (
   <img
@@ -20,7 +20,7 @@ const Name = () => (
   <span
     style={{
       fontSize: 20,
-      color: constants.colors.text.default
+      color: colors.text.default
     }}
   >
     Fernando Alberto Zavalia Paunero
@@ -31,7 +31,7 @@ const SmallDescription = () => (
   <span
     style={{
       fontSize: 14,
-      color: constants.colors.text.default,
+      color: colors.text.default,
       textAlign: "center"
     }}
   >
@@ -47,7 +47,7 @@ const LongDescription = () => (
   <div
     style={{
       fontSize: 16,
-      color: constants.colors.text.default,
+      color: colors.text.default,
       textAlign: "justify"
     }}
   >
@@ -83,7 +83,7 @@ const PersonalDataElement = ({ label, value }) => (
 );
 
 const PersonalData = () => (
-  <div style={{ color: constants.colors.text.default, width: "100%" }}>
+  <div style={{ color: colors.text.default, width: "100%" }}>
     <PersonalDataElement label="Birthday" value="26/10/93" />
     <Separator.Space amount={5} />
     <PersonalDataElement label="Marital Status" value="Single" />

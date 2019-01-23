@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/Layout";
-import * as constants from "../utils/constants";
 import Separator from "../components/Separator";
+import { colors } from "../utils/constants";
 
 const Element = ({ image, name, dates, description }) => (
   <div style={{ display: "flex", width: "100%" }}>
@@ -23,15 +23,15 @@ const Element = ({ image, name, dates, description }) => (
           width: "100%"
         }}
       >
-        <span style={{ color: constants.colors.text.default }}>{name}</span>
-        <span style={{ color: constants.colors.text.default }}>
+        <span style={{ color: colors.text.default }}>{name}</span>
+        <span style={{ color: colors.text.default }}>
           <i>{dates}</i>
         </span>
       </div>
       <Separator.Space amount={10} />
       <div
         style={{
-          color: constants.colors.text.default,
+          color: colors.text.default,
           textAlign: "justify",
           fontSize: 14
         }}

@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import classNames from "classnames";
-import * as constants from "../utils/constants";
+import { colors } from "../utils/constants";
 
 const navbarRoutes = [
   { path: "/about", label: "About" },
@@ -46,7 +46,7 @@ const NavbarButton = ({ label, active, path }) => {
           display: flex;
           align-items: center;
           justify-content: center;
-          color: ${constants.colors.text.default};
+          color: ${colors.text.default};
           cursor: pointer;
           border-radius: 10px;
         }
