@@ -86,8 +86,6 @@ const PersonalData = () => (
   <div style={{ color: colors.text.default, width: "100%" }}>
     <PersonalDataElement label="Birthday" value="26/10/93" />
     <Separator.Space amount={5} />
-    <PersonalDataElement label="Marital Status" value="Single" />
-    <Separator.Space amount={5} />
     <PersonalDataElement label="Nationality" value="Argentinian" />
     <Separator.Space amount={5} />
     <PersonalDataElement label="Email" value="zavaliafernando@gmail.com" />
