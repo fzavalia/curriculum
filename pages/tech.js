@@ -15,10 +15,7 @@ const Element = ({ image, name }) => (
         flexDirection: "column"
       }}
     >
-      <img
-        style={{ width: "100%", maxWidth: 100 }}
-        src={image}
-      />
+      <img style={{ width: "100%", maxWidth: 100 }} src={image} />
       <div
         style={{
           textAlign: "center",
@@ -53,7 +50,7 @@ const TechPage = ({ pathname }) => {
       <Layout section="Tech" pathname={pathname}>
         <Separator.Space amount={100} />
         <Title value="Currently working with:" />
-        <Separator.Space amount={20} />
+        <Separator.Space amount={40} />
         <div className="row">
           <Element image="/static/img/tech/js.png" name="JavaScript" />
           <Element image="/static/img/tech/react.png" name="React" />
@@ -67,9 +64,9 @@ const TechPage = ({ pathname }) => {
           <Element image="/static/img/tech/gitlab.png" name="Gitlab" />
           <Element image="/static/img/tech/mariadb.png" name="MariaDB" />
         </div>
-        <Separator.Line amount={80} />
-        <Title value="Have experience with:" />
-        <Separator.Space amount={20} />
+        <Separator.Line amount={160} />
+        <Title value="Experienced with:" />
+        <Separator.Space amount={40} />
         <div className="row">
           <Element image="/static/img/tech/csharp.png" name="C#" />
           <Element image="/static/img/tech/unity.png" name="Unity" />
@@ -77,7 +74,10 @@ const TechPage = ({ pathname }) => {
           <Element image="/static/img/tech/vertx.jpg" name="Vert.x" />
           <Element image="/static/img/tech/java.png" name="Java" />
           <Element image="/static/img/tech/ts.png" name="TypeScript" />
-          <Element image="/static/img/tech/cocoscreator.png" name="Cocos Creator" />
+          <Element
+            image="/static/img/tech/cocoscreator.png"
+            name="Cocos Creator"
+          />
           <Element image="/static/img/tech/express.png" name="Express" />
           <Element image="/static/img/tech/mongodb.png" name="MongoDB" />
         </div>

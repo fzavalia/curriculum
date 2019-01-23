@@ -6,8 +6,7 @@ import * as constants from "../utils/constants";
 const navbarRoutes = [
   { path: "/about", label: "About" },
   { path: "/career", label: "Career" },
-  { path: "/tech", label: "Tech" },
-  { path: "/portfolio", label: "Portfolio" }
+  { path: "/tech", label: "Tech" }
 ];
 
 const NavbarButtonArrow = () => (
