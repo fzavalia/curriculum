@@ -44,9 +44,6 @@ const Title = ({ value }) => (
 const TechPage = ({ pathname }) => {
   return (
     <React.Fragment>
-      <Head>
-        <link rel="stylesheet" href="/static/css/flexboxgrid.min.css" />
-      </Head>
       <Layout section="Tech" pathname={pathname}>
         <Separator.Space amount={60} />
         <Title value="Currently working with:" />
