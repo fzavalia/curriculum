@@ -7,14 +7,14 @@ jobs:
       - image: fzavalia/eb-cli
     steps:
       - checkout
-      - run: ~/.local/bin/eb deploy curriculum-vitae-$CIRCLE_BRANCH
+      - run: eb deploy curriculum-vitae-$CIRCLE_BRANCH
 
   deploy-prod:
     docker:
       - image: fzavalia/eb-cli
     steps:
       - checkout
-      - run: ~/.local/bin/eb deploy curriculum-vitae-$CIRCLE_BRANCH
+      - run: eb deploy curriculum-vitae-$CIRCLE_BRANCH
 
 workflows:
   version: 2
