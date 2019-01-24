@@ -1,42 +1,33 @@
 version: 2.0
 environment:
 jobs:
+
   deploy:
     docker:
-      - image: circleci/python:3.7.2
+      - image: fzavalia/eb-cli
     steps:
       - checkout
-      - run:
-          name: Install EB CLI
-          command: |
-            pip install awsebcli --upgrade --user
-      - run:
-          name: Deploy
-          command: |
-            ~/.local/bin/eb deploy curriculum-vitae-$CIRCLE_BRANCH
+      - run: ~/.local/bin/eb deploy curriculum-vitae-$CIRCLE_BRANCH
+
   deploy-prod:
     docker:
-      - image: circleci/python:3.7.2
+      - image: fzavalia/eb-cli
     steps:
       - checkout
-      - run:
-          name: Install EB CLI
-          command: |
-            pip install awsebcli --upgrade --user
-      - run:
-          name: Deploy
-          command: |
-            ~/.local/bin/eb deploy curriculum-vitae
+      - run: ~/.local/bin/eb deploy curriculum-vitae-$CIRCLE_BRANCH
+
 workflows:
   version: 2
   deploy:
     jobs:
+
       - deploy:
           filters:
             branches:
               only:
                 - develop
                 - master
+
       - deploy-prod-approval:
           type: approval
           requires:
@@ -45,6 +36,7 @@ workflows:
             branches:
               only:
                 - master
+                
       - deploy-prod:
           requires:
             - deploy-prod-approval
