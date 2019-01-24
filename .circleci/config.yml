@@ -5,8 +5,9 @@ jobs:
     docker:
       - image: alpine:3.8
     steps:
+      - checkout
       - run:
-          name: Deploy
+          name: Install Dependencies
           command: |
             apk add python3 curl git
             curl -O https://bootstrap.pypa.io/get-pip.py
@@ -15,7 +16,10 @@ jobs:
             pip --version
             pip install awsebcli --upgrade --user
             eb --version
-      - checkout
+      - run:
+          name: Deploy
+          command: |
+            eb deploy curriculum-vitae-$CIRCLE_BRANCH
 workflows:
   version: 2
   build:
