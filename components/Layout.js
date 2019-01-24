@@ -80,5 +80,6 @@ export default ({ section, children, pathname }) => (
         </div>
       </FadeIn>
     </Content>
+    <span style={{ position: "fixed", right: 5, bottom: 5, color: 'green' }}>TEST</span>
   </React.Fragment>
 );
