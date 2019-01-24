@@ -13,7 +13,7 @@ jobs:
       - run:
           name: Deploy
           command: |
-            ~/.local/bin/eb deploy
+            ~/.local/bin/eb deploy curriculum-vitae-$CIRCLE_BRANCH
 
 workflows:
   version: 2
