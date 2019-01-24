@@ -1,6 +1,5 @@
 global:
   application_name: curriculum-vitae
-  default_ec2_keyname: aws-eb
   default_platform: Docker 18.06.1-ce
   default_region: us-east-1
   sc: git
