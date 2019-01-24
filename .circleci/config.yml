@@ -1,17 +1,32 @@
 version: 2.0
 environment:
 jobs:
-  build:
+  deploy:
     docker:
       - image: alpine:3.8
     steps:
       - checkout
-      - run: |
-          apk add python3 curl
-          curl -O https://bootstrap.pypa.io/get-pip.py
-          python3 get-pip.py --user
-          export PATH=/root/.local/bin:$PATH
-          pip --version
-          pip install awsebcli --upgrade --user
-          eb --version
-
+      - run:
+          name: Installing EB CLI
+          command: |
+            apk add python3 curl
+            curl -O https://bootstrap.pypa.io/get-pip.py
+            python3 get-pip.py --user
+            export PATH=/root/.local/bin:$PATH
+            pip --version
+            pip install awsebcli --upgrade --user
+            eb --version
+      - run:
+          name: Deploy
+          command: |
+            eb deploy curriculum-vitae-$CIRCLE_BRANCH
+workflows:
+  version: 2
+  build:
+    jobs:
+      - deploy:
+          filters:
+            branches:
+              only:
+                - develop
+                - master
