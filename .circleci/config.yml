@@ -2,7 +2,7 @@ version: 2.0
 environment:
 jobs:
 
-  deploy:
+  deploy-develop:
     docker:
       - image: fzavalia/eb-cli
     steps:
@@ -21,7 +21,7 @@ workflows:
   deploy:
     jobs:
 
-      - deploy:
+      - deploy-develop:
           filters:
             branches:
               only:
