@@ -9,7 +9,7 @@ jobs:
       - run:
           name: Deploy
           command: |
-            apk add python3 curl
+            apk add python3 curl git
             curl -O https://bootstrap.pypa.io/get-pip.py
             python3 get-pip.py --user
             export PATH=/root/.local/bin:$PATH
