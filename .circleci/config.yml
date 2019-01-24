@@ -14,7 +14,7 @@ jobs:
       - image: fzavalia/eb-cli
     steps:
       - checkout
-      - run: eb deploy curriculum-vitae-$CIRCLE_BRANCH
+      - run: eb deploy curriculum-vitae
 
 workflows:
   version: 2
