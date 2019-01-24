@@ -7,7 +7,7 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Installing EB CLI
+          name: Deploy
           command: |
             apk add python3 curl
             curl -O https://bootstrap.pypa.io/get-pip.py
@@ -16,9 +16,6 @@ jobs:
             pip --version
             pip install awsebcli --upgrade --user
             eb --version
-      - run:
-          name: Deploy
-          command: |
             eb deploy curriculum-vitae-$CIRCLE_BRANCH
 workflows:
   version: 2
