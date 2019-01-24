@@ -28,7 +28,7 @@ const NavbarButtonArrow = () => (
 const NavbarButton = ({ label, active, path }) => {
   return (
     <div style={{ flex: 1, position: "relative" }}>
-      <Link prefetch href={path}>
+      <Link href={path}>
         <div
           className={classNames(
             "button",

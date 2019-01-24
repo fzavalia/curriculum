@@ -11,9 +11,7 @@ const CustomHead = ({ section }) => (
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
     />
-    {/** TODO: preload only in tech page, being the only place where it is needed */}
     <link rel="stylesheet" href="/static/css/flexboxgrid.min.css" />
-    <link rel="preload" as="image" href="/static/img/app/bg.jpg" />
   </Head>
 );
 
