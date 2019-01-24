@@ -46,9 +46,6 @@ workflows:
               only:
                 - master
       - deploy-prod:
-          type: approval
-          requires:
-            - deploy
           filters:
             branches:
               only:
