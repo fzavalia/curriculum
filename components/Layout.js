@@ -12,6 +12,7 @@ const CustomHead = ({ section }) => (
       href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
     />
     <link rel="stylesheet" href="/static/css/flexboxgrid.min.css" />
+    <link rel="shortcut icon" href="/static/favicon.ico" />
   </Head>
 );
 
