@@ -54,8 +54,8 @@ const LongDescription = () => (
     <p>
       This is a recurring problem with most of the projects I have had the
       pleasure to work with. Feature after feature required by the client and
-      not enough dicipline to speak up and foretold the technical debt that will
-      eventually consume it and turn it into the aforementioned ruins.
+      not enough discipline to speak up and foretold the technical debt that
+      will eventually consume it and turn it into the aforementioned ruins.
     </p>
     <p>
       Guiding myself through the teachings of Robert C. Martin, I wish to make

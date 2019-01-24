@@ -62,16 +62,16 @@ const CareerPage = ({ pathname }) => {
               <span>Lead Front Developer | FullStack</span>
               <p>
                 Decided to test myself with a leadership role of a small team.
-                With all decitions, conserning the frontend of owr applications
+                With all decisions, concerning the frontend of our applications
                 going through my person, I can finally transmit what I learned
-                this past years to people who where at my same rookie position
-                on days past.
+                this past years to people who were at my same rookie position on
+                days past.
               </p>
               <p>
-                Conserning the status of Startup the company handles and the
-                increased amount of responsabilities the decreases quantity of
-                personel has to handle, I could prove myself successfully in the
-                backend and infrastructure.
+                Concerning the status of "Startup" the company handles and the
+                increased amount of responsibilities the decreased measure of
+                personnel has to handle, I could prove myself successfully in
+                the backend and infrastructure.
               </p>
             </div>
           }
@@ -97,10 +97,9 @@ const CareerPage = ({ pathname }) => {
                 through ads.
               </p>
               <p>
-                I'm thankfull to this firm for the exponential growth I showed
+                I'm thankful to this firm for the exponential growth I showed
                 through my time there. Things like Clean Code, TDD, DDD,
-                fullstacking, functional programming and much more which is all
-                I preach nowadays.
+                fullstacking, functional programming
               </p>
             </div>
           }
