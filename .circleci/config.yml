@@ -7,7 +7,7 @@ jobs:
       - image: fzavalia/eb-cli
     steps:
       - checkout
-      - run: eb deploy curriculum-vitae-$CIRCLE_BRANCH
+      - run: eb deploy curriculum-vitae-develop
 
   deploy-prod:
     docker:
@@ -26,12 +26,9 @@ workflows:
             branches:
               only:
                 - develop
-                - master
 
       - deploy-prod-approval:
           type: approval
-          requires:
-            - deploy
           filters:
             branches:
               only:
