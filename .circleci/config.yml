@@ -37,6 +37,14 @@ workflows:
               only:
                 - develop
                 - master
+      - hold:
+          type: approval
+          requires:
+            - deploy
+          filters:
+            branches:
+              only:
+                - master
       - deploy-prod:
           type: approval
           requires:
