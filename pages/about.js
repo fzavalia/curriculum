@@ -50,7 +50,7 @@ const LongDescription = () => (
   >
     <p>
       It actually sounds nice and reassuring. The fact that code can never lie.
-      That a computer executes exactly what we ask it to, and that just to fix a
+      That a computer executes exactly what we ask it to, and to fix a
       bug or add a feature, we can just read the pertinent files and lines of
       code and be done with it.
     </p>
@@ -58,7 +58,7 @@ const LongDescription = () => (
       However, this can rarely be accomplished by rushing the keyboard and
       coding the first thing that comes to mind, as the developer that has to
       work with your code; or even yourself after a couple of weeks, will be
-      received by a web of lies and deception of lazily written program.
+      received by a web of lies and deception of a lazily written program.
     </p>
     <p>
       <b>My goal</b> is to keep learning about the best practices to write
