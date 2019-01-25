@@ -14,7 +14,26 @@ const Element = ({ image, name }) => (
         flexDirection: "column"
       }}
     >
-      <img style={{ width: "100%", maxWidth: 100 }} src={image} />
+      <div
+        style={{
+          width: "100%",
+          maxWidth: 100,
+          paddingTop: "100%",
+          position: "relative"
+        }}
+      >
+        <img
+          style={{
+            width: "inherit",
+            position: "absolute",
+            top: 0,
+            right: 0,
+            bottom: 0,
+            left: 0
+          }}
+          src={image}
+        />
+      </div>
       <div
         style={{
           textAlign: "center",
