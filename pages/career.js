@@ -5,16 +5,17 @@ import { colors } from "../utils/constants";
 
 const Element = ({ image, name, dates, description }) => (
   <div style={{ display: "flex", width: "100%" }}>
-    <img src={image} />
-    <style jsx>{`
-      img {
-        margin: auto 0;
-        max-height: 100px;
-        max-width: 100px;
-        object-fit: cover;
-        border-radius: 50%;
-      }
-    `}</style>
+    <div style={{ margin: "auto 0", width: 100, height: 100 }}>
+      <img src={image} />
+      <style jsx>{`
+        img {
+          height: inherit;
+          width: inherit;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+      `}</style>
+    </div>
     <div style={{ marginLeft: 20, width: "100%" }}>
       <div
         style={{
