@@ -35,11 +35,8 @@ const SmallDescription = () => (
       textAlign: "center"
     }}
   >
-    <i>
-      "We build our computer (systems) the way we build our cities: over time,
-      without a plan, on top of ruins."
-    </i>{" "}
-    - Ellen Ullman
+    <i>"Truth can only be found in one place: the code."</i> - Robert C. Martin,
+    Clean Code: A Handbook of Agile Software
   </span>
 );
 
@@ -52,20 +49,22 @@ const LongDescription = () => (
     }}
   >
     <p>
-      This is a recurring problem with most of the projects I have had the
-      pleasure to work with. Feature after feature required by the client and
-      not enough discipline to speak up and foretold the technical debt that
-      will eventually consume it and turn it into the aforementioned ruins.
+      It actually sounds nice and reassuring. The fact that code can never lie.
+      That a computer executes exactly what we ask it to, and that just to fix a
+      bug or add a feature, we can just read the pertinent files and lines of
+      code and be done with it.
     </p>
     <p>
-      Guiding myself through the teachings of Robert C. Martin, I wish to make
-      Clean Code and good coding practices a must in even small companies by
-      showing developers and PMs the way to not having to maintain ruins
-      anymore, but robust self maintained systems.
+      However, this can rarely be accomplished by rushing the keyboard and
+      coding the first thing that comes to mind, as the developer that has to
+      work with your code; or even yourself after a couple of weeks, will be
+      received by a web of lies and deception of lazily written program.
     </p>
     <p>
-      Until the moment I can consider myself a referent of good code, I wish to
-      continue learning from the most prominent developers.
+      <b>My goal</b> is to keep learning about the best practices to write
+      robust, human friendly code while preaching to my peers what I have
+      learned throughout these years about <b>Clean Code</b> and being a{" "}
+      <b>Clean Coder</b>.
     </p>
   </div>
 );
