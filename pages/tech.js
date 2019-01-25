@@ -2,7 +2,6 @@ import React from "react";
 import Layout from "../components/Layout";
 import Separator from "../components/Separator";
 import { colors } from "../utils/constants";
-import Head from "next/head";
 
 const Element = ({ image, name }) => (
   <div className="col-md-2 col-sm-6 col-xs-4">
