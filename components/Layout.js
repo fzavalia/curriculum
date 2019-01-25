@@ -66,6 +66,8 @@ const Content = ({ children }) => (
   </div>
 );
 
+const navbarSize = 43;
+
 export default ({ section, children, pathname }) => (
   <React.Fragment>
     <CustomHead section={section} />
@@ -74,12 +76,21 @@ export default ({ section, children, pathname }) => (
     <GlobalStyles />
     <Content>
       <Navbar pathname={pathname} />
-      <Separator.Space amount={40} />
-      <FadeIn>
-        <div style={{ width: "90%", maxWidth: 700, margin: "auto" }}>
-          {children}
-        </div>
-      </FadeIn>
+      <Separator.Space amount={navbarSize} />
+      <div style={{ position: "fixed", width: "100%" }}>
+        <FadeIn>
+          <div
+            style={{
+              height: `calc(100vh - ${navbarSize}px)`,
+              overflow: "auto"
+            }}
+          >
+            <div style={{ width: "90%", maxWidth: 700, margin: "auto" }}>
+              {children}
+            </div>
+          </div>
+        </FadeIn>
+      </div>
     </Content>
   </React.Fragment>
 );
