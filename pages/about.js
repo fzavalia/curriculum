@@ -64,8 +64,8 @@ const LongDescription = () => (
       anymore, but robust self maintained systems.
     </p>
     <p>
-      Up until the moment I can really consider myself a referent of good code.
-      I wish to continue learning from the best developers I can find.
+      Until the moment I can consider myself a referent of good code, I wish to
+      continue learning from the most prominent developers.
     </p>
   </div>
 );
