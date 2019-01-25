@@ -68,10 +68,9 @@ const CareerPage = ({ pathname }) => {
                 days past.
               </p>
               <p>
-                Concerning the status of "Startup" the company handles and the
-                increased amount of responsibilities the decreased measure of
-                personnel has to handle, I could prove myself successfully in
-                the backend and infrastructure.
+                Given the status of "Startup" the company has, and the increased
+                amount of responsibilities the small team has to handle, I could
+                prove myself successfully in the backend and infrastructure.
               </p>
             </div>
           }
@@ -86,20 +85,21 @@ const CareerPage = ({ pathname }) => {
               <span>Software Engineer</span>
               <p>
                 Started developing one of the company's games in Unity until I
-                was relocated to the Platform Team, dedicated to develop
-                services and tools for the rest of the company games.
+                was relocated to the <b>Platform Team</b>, dedicated to develop
+                services and tools for other teams in the company.
               </p>
               <p>
                 My two biggest projects consisted of; a dependency manager for
                 Unity in which code and libraries could be distributed and
-                versioned for everyone; and a AD service which eased the
-                implementation of various AD networks, increasing revenue
+                versioned for everyone; and an Ad service which eased the
+                implementation of various Ad networks, increasing revenue
                 through ads.
               </p>
               <p>
-                I'm thankful to this firm for the exponential growth I showed
-                through my time there. Things like Clean Code, TDD, DDD,
-                fullstacking, functional programming
+                I'm thankful to this firm for the exponential growth I could
+                show through my time there. Learning and implementing TDD, DDD,
+                microservices, functional programming, etc. As well as starting
+                my career as a Clean Code enthusiast.
               </p>
             </div>
           }
