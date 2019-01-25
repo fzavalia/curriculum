@@ -77,20 +77,13 @@ export default ({ section, children, pathname }) => (
     <Content>
       <Navbar pathname={pathname} />
       <Separator.Space amount={navbarSize} />
-      <div style={{ position: "fixed", width: "100%" }}>
-        <FadeIn>
-          <div
-            style={{
-              height: `calc(100vh - ${navbarSize}px)`,
-              overflow: "auto"
-            }}
-          >
-            <div style={{ width: "90%", maxWidth: 700, margin: "auto" }}>
-              {children}
-            </div>
+      <FadeIn>
+        <div style={{ height: `calc(100vh - ${navbarSize}px)`, overflow: "scroll" }}>
+          <div style={{ width: "90%", maxWidth: 700, margin: "auto" }}>
+            {children}
           </div>
-        </FadeIn>
-      </div>
+        </div>
+      </FadeIn>
     </Content>
   </React.Fragment>
 );
