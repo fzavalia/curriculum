@@ -45,7 +45,7 @@ const Element = ({ image, name, dates, description }) => (
 
 const CareerPage = ({ pathname }) => {
   return (
-    <Layout section="Experience" pathname={pathname}>
+    <Layout section="Career" pathname={pathname}>
       <div
         style={{
           display: "flex",
