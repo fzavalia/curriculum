@@ -10,10 +10,3 @@ jobs:
       run: | 
         ssh $EC2_HOST
         ls
-
-workflows:
-  version: 2
-  deploy:
-    jobs:
-      - deploy:
-          
