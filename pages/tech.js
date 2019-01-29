@@ -73,7 +73,6 @@ const TechPage = ({ pathname }) => {
           <Element image="/static/img/tech/nextjs.png" name="NextJS" />
           <Element image="/static/img/tech/php.png" name="PHP" />
           <Element image="/static/img/tech/laravel.png" name="Laravel" />
-          <Element image="/static/img/tech/lumen.png" name="Lumen" />
           <Element image="/static/img/tech/docker.png" name="Docker" />
           <Element image="/static/img/tech/aws.png" name="AWS" />
           <Element image="/static/img/tech/gitlab.png" name="Gitlab" />
