@@ -84,9 +84,9 @@ const TechPage = ({ pathname }) => {
         <Separator.Space amount={40} />
         <div className="row">
           <Element image="/static/img/tech/csharp.png" name="C#" />
-          <Element image="/static/img/tech/unity.png" name="Unity" />
+          <Element image="/static/img/tech/unity.jpeg" name="Unity" />
           <Element image="/static/img/tech/kotlin.svg" name="Kotlin" />
-          <Element image="/static/img/tech/vertx.jpg" name="Vert.x" />
+          <Element image="/static/img/tech/vertx.png" name="Vert.x" />
           <Element image="/static/img/tech/java.png" name="Java" />
           <Element image="/static/img/tech/ts.png" name="TypeScript" />
           <Element
