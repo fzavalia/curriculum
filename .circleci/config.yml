@@ -1,7 +1,7 @@
 version: 2
 
 jobs:
-  deploy:
+  build:
     machine: true
     steps:
       add_ssh_keys:
