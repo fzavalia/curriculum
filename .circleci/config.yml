@@ -7,11 +7,13 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "5f:c9:e9:ef:90:9e:0c:e1:0a:33:7f:0e:22:83:a6:7f"
-      - run: | 
-          ssh $EC2_HOST ls
+      - run: ssh $EC2_HOST ./deploy.sh
 
 workflows:
   version: 2
   deploy:
     jobs:
-      - deploy
+      - deploy:
+          filters:
+            branches:
+              - master
