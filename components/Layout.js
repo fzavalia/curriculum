@@ -2,7 +2,6 @@ import Head from "next/head";
 import Navbar from "./Navbar";
 import FadeIn from "./FadeIn";
 import Separator from "./Separator";
-import { green } from "ansi-colors";
 
 const CustomHead = ({ section }) => (
   <Head>
@@ -84,7 +83,6 @@ export default ({ section, children, pathname }) => (
             {children}
           </div>
         </div>
-        <div style={{background: 'green', position: 'absolute', bottom: 0, right: 0}}>FOO</div>
       </FadeIn>
     </Content>
   </React.Fragment>
