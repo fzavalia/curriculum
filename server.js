@@ -3,6 +3,7 @@ const next = require("next");
 const fs = require("fs");
 const fsp = fs.promises;
 const path = require("path");
+const yaml = require("js-yaml");
 
 const nextApp = next({ dev: process.env.NODE_ENV !== "production" });
 const nextHandler = nextApp.getRequestHandler();
@@ -46,16 +47,22 @@ const handleLocalizationFileExistance = (
 ) =>
   fs.exists(localizationFilePath, async exists => {
     if (exists) {
-      res.send(await fsp.readFile(localizationFilePath, { encoding: "utf8" }));
+      res.send(
+        yaml.safeLoad(
+          await fsp.readFile(localizationFilePath, { encoding: "utf8" })
+        )
+      );
     } else {
       recursivellyGetlocalization(langs, res, index + 1);
     }
   });
 
-const getDefaultLocalization = () =>
-  fsp.readFile(makeLocalizationFilePathFromLang("en"), {
-    encoding: "utf8"
-  });
+const getDefaultLocalization = async () =>
+  yaml.safeLoad(
+    await fsp.readFile(makeLocalizationFilePathFromLang("en"), {
+      encoding: "utf8"
+    })
+  );
 
 const makeLocalizationFilePathFromLang = lang =>
-  path.join(__dirname, "static", "localization", lang + ".json");
+  path.join(__dirname, "static", "localization", lang + ".yml");
