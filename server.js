@@ -1,17 +1,13 @@
 const express = require("express");
 const next = require("next");
 const fs = require("fs");
-const fsp = fs.promises;
-const path = require("path");
-const prepareLocalizationFiles = require('./static/localization/prepareLocalization')
+const loadLocalization = require("./static/localization/loadLocalization");
 
 const nextApp = next({ dev: process.env.NODE_ENV !== "production" });
 const nextHandler = nextApp.getRequestHandler();
-
-prepareLocalizationFiles()
+const localization = loadLocalization();
 
 nextApp.prepare().then(() => {
-
   const server = express();
 
   server.get("/localization", getlocalizationHandler);
@@ -30,34 +26,15 @@ nextApp.prepare().then(() => {
 });
 
 const getlocalizationHandler = (req, res) =>
-  recursivellyGetlocalization(req.query.langs, res);
+  res.send(recursivellyGetLanglocalization(req.query.langs, res));
 
-const recursivellyGetlocalization = async (langs, res, index = 0) =>
+const recursivellyGetLanglocalization = (langs, res, index = 0) =>
   index >= langs.length
-    ? res.send(await getDefaultLocalization())
-    : handleLocalizationFileExistance(
-        makeLocalizationFilePathFromLang(langs[index]),
-        langs,
-        res,
-        index
-      );
+    ? getDefaultLocalization()
+    : handleLocalizationLangExistence(langs, res, index);
 
-const handleLocalizationFileExistance = (
-  localizationFilePath,
-  langs,
-  res,
-  index
-) =>
-  fs.exists(localizationFilePath, async exists => {
-    if (exists) {
-      res.send(await fsp.readFile(localizationFilePath, { encoding: "utf8" }));
-    } else {
-      recursivellyGetlocalization(langs, res, index + 1);
-    }
-  });
+const handleLocalizationLangExistence = (langs, res, index) =>
+  localization[langs[index]] ||
+  recursivellyGetLanglocalization(langs, res, index + 1);
 
-const getDefaultLocalization = () =>
-  fsp.readFile(makeLocalizationFilePathFromLang("en"), { encoding: "utf8" });
-
-const makeLocalizationFilePathFromLang = lang =>
-  path.join(__dirname, "static", "localization", "json", lang + ".json");
+const getDefaultLocalization = () => localization["en"];
