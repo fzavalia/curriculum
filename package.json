@@ -14,7 +14,7 @@
     "rimraf": "^2.6.3"
   },
   "scripts": {
-    "dev": "nodemon -w ./server.js server.js",
+    "dev": "nodemon -w ./server.js -w ./static/localization/prepareLocalization.js server.js",
     "build": "next build",
     "start": "cross-env NODE_ENV=production node server.js"
   },

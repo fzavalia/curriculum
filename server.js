@@ -3,11 +3,15 @@ const next = require("next");
 const fs = require("fs");
 const fsp = fs.promises;
 const path = require("path");
+const prepareLocalizationFiles = require('./static/localization/prepareLocalization')
 
 const nextApp = next({ dev: process.env.NODE_ENV !== "production" });
 const nextHandler = nextApp.getRequestHandler();
 
+prepareLocalizationFiles()
+
 nextApp.prepare().then(() => {
+
   const server = express();
 
   server.get("/localization", getlocalizationHandler);
