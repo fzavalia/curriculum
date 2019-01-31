@@ -3,7 +3,6 @@ const next = require("next");
 const fs = require("fs");
 const fsp = fs.promises;
 const path = require("path");
-const yaml = require("js-yaml");
 
 const nextApp = next({ dev: process.env.NODE_ENV !== "production" });
 const nextHandler = nextApp.getRequestHandler();
