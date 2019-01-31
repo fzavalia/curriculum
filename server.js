@@ -8,10 +8,9 @@ const nextApp = next({ dev: process.env.NODE_ENV !== "production" });
 const nextHandler = nextApp.getRequestHandler();
 
 nextApp.prepare().then(() => {
-
   const server = express();
 
-  server.get("/locale/:lang", getLocaleHandler);
+  server.get("/localization", getlocalizationHandler);
 
   server.get("/", (_, res) => res.redirect("/about"));
 
@@ -20,27 +19,43 @@ nextApp.prepare().then(() => {
   const port = process.env.PORT || 3000;
 
   server.listen(port, err => {
-
     if (err) throw err;
-    
+
     console.log(`> Ready on http://localhost:${port}`);
   });
 });
 
-const getLocaleHandler = (req, res) => {
+const getlocalizationHandler = (req, res) =>
+  recursivellyGetlocalization(req.query.langs, res);
 
-  const lang = req.params["lang"]
+const recursivellyGetlocalization = async (langs, res, index = 0) =>
+  index >= langs.length
+    ? res.send(await getDefaultLocalization())
+    : handleLocalizationFileExistance(
+        makeLocalizationFilePathFromLang(langs[index]),
+        langs,
+        res,
+        index
+      );
 
-  let localePath = makeLangPath(lang);
-
-  fs.exists(localePath, async exists => {
-    
-    if (!exists) localePath = makeLangPath('en')
-
-    const data = await fsp.readFile(localePath, { encoding: "utf8" });
-    
-    res.send(data);
+const handleLocalizationFileExistance = (
+  localizationFilePath,
+  langs,
+  res,
+  index
+) =>
+  fs.exists(localizationFilePath, async exists => {
+    if (exists) {
+      res.send(await fsp.readFile(localizationFilePath, { encoding: "utf8" }));
+    } else {
+      recursivellyGetlocalization(langs, res, index + 1);
+    }
   });
-};
 
-const makeLangPath = lang => path.join(__dirname, "static", "locale", lang + ".json")
+const getDefaultLocalization = () =>
+  fsp.readFile(makeLocalizationFilePathFromLang("en"), {
+    encoding: "utf8"
+  });
+
+const makeLocalizationFilePathFromLang = lang =>
+  path.join(__dirname, "static", "localization", lang + ".json");

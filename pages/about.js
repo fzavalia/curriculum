@@ -2,6 +2,9 @@ import React from "react";
 import Layout from "../components/Layout";
 import Separator from "../components/Separator";
 import { colors } from "../utils/constants";
+import localization from "../utils/Localization";
+import globalGetInitialProps from "../utils/getInitialProps";
+import getInitialProps from "../utils/getInitialProps";
 
 const Portrait = () => (
   <img
@@ -50,9 +53,9 @@ const LongDescription = () => (
   >
     <p>
       It actually sounds nice and reassuring. The fact that code can never lie.
-      That a computer executes exactly what we ask it to, and to fix a
-      bug or add a feature, we can just read the pertinent files and lines of
-      code and be done with it.
+      That a computer executes exactly what we ask it to, and to fix a bug or
+      add a feature, we can just read the pertinent files and lines of code and
+      be done with it.
     </p>
     <p>
       However, this can rarely be accomplished by rushing the keyboard and
@@ -91,9 +94,9 @@ const PersonalData = () => (
   </div>
 );
 
-const AboutPage = ({ pathname }) => {
+const AboutPage = ({ pathname, localization }) => {
   return (
-    <Layout section="About" pathname={pathname}>
+    <Layout section="About" pathname={pathname} localization={localization}>
       <div
         style={{
           display: "flex",
@@ -117,6 +120,6 @@ const AboutPage = ({ pathname }) => {
   );
 };
 
-AboutPage.getInitialProps = ({ pathname }) => ({ pathname });
+AboutPage.getInitialProps = getInitialProps;
 
 export default AboutPage;

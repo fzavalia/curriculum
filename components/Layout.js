@@ -2,6 +2,7 @@ import Head from "next/head";
 import Navbar from "./Navbar";
 import FadeIn from "./FadeIn";
 import Separator from "./Separator";
+import Localization from "../utils/Localization";
 
 const CustomHead = ({ section }) => (
   <Head>
@@ -68,22 +69,32 @@ const Content = ({ children }) => (
 
 const navbarSize = 43;
 
-export default ({ section, children, pathname }) => (
-  <React.Fragment>
-    <CustomHead section={section} />
-    <BGImage />
-    <BGImageCover />
-    <GlobalStyles />
-    <Content>
-      <Navbar pathname={pathname} />
-      <Separator.Space amount={navbarSize} />
-      <FadeIn>
-        <div style={{ height: `calc(100vh - ${navbarSize}px)`, overflowY: "auto" }}>
-          <div style={{ width: "90%", maxWidth: 700, margin: "auto" }}>
-            {children}
+export default ({ section, children, pathname, localization }) => {
+
+  Localization.set(localization)
+
+  return (
+    <React.Fragment>
+      <CustomHead section={section} />
+      <BGImage />
+      <BGImageCover />
+      <GlobalStyles />
+      <Content>
+        <Navbar pathname={pathname} />
+        <Separator.Space amount={navbarSize} />
+        <FadeIn>
+          <div
+            style={{
+              height: `calc(100vh - ${navbarSize}px)`,
+              overflowY: "auto"
+            }}
+          >
+            <div style={{ width: "90%", maxWidth: 700, margin: "auto" }}>
+              {children}
+            </div>
           </div>
-        </div>
-      </FadeIn>
-    </Content>
-  </React.Fragment>
-);
+        </FadeIn>
+      </Content>
+    </React.Fragment>
+  );
+};

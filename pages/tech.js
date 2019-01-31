@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../components/Layout";
 import Separator from "../components/Separator";
 import { colors } from "../utils/constants";
+import getInitialProps from "../utils/getInitialProps";
 
 const Element = ({ image, name }) => (
   <div className="col-md-2 col-sm-6 col-xs-4">
@@ -59,10 +60,10 @@ const Title = ({ value }) => (
   </div>
 );
 
-const TechPage = ({ pathname }) => {
+const TechPage = ({ pathname, localization }) => {
   return (
     <React.Fragment>
-      <Layout section="Tech" pathname={pathname}>
+      <Layout section="Tech" pathname={pathname} localization={localization}>
         <Separator.Space amount={60} />
         <Title value="Currently working with:" />
         <Separator.Space amount={40} />
@@ -101,6 +102,6 @@ const TechPage = ({ pathname }) => {
   );
 };
 
-TechPage.getInitialProps = ({ pathname }) => ({ pathname });
+TechPage.getInitialProps = getInitialProps;
 
 export default TechPage;

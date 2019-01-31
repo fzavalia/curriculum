@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../components/Layout";
 import Separator from "../components/Separator";
 import { colors } from "../utils/constants";
+import getInitialProps from "../utils/getInitialProps";
 
 const Element = ({ image, name, dates, description }) => (
   <div style={{ display: "flex", width: "100%" }}>
@@ -43,9 +44,9 @@ const Element = ({ image, name, dates, description }) => (
   </div>
 );
 
-const CareerPage = ({ pathname }) => {
+const CareerPage = ({ pathname, localization }) => {
   return (
-    <Layout section="Career" pathname={pathname}>
+    <Layout section="Career" pathname={pathname} localization={localization}>
       <div
         style={{
           display: "flex",
@@ -159,6 +160,6 @@ const CareerPage = ({ pathname }) => {
   );
 };
 
-CareerPage.getInitialProps = ({ pathname }) => ({ pathname });
+CareerPage.getInitialProps = getInitialProps
 
 export default CareerPage;
