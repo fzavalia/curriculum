@@ -47,22 +47,14 @@ const handleLocalizationFileExistance = (
 ) =>
   fs.exists(localizationFilePath, async exists => {
     if (exists) {
-      res.send(
-        yaml.safeLoad(
-          await fsp.readFile(localizationFilePath, { encoding: "utf8" })
-        )
-      );
+      res.send(await fsp.readFile(localizationFilePath, { encoding: "utf8" }));
     } else {
       recursivellyGetlocalization(langs, res, index + 1);
     }
   });
 
-const getDefaultLocalization = async () =>
-  yaml.safeLoad(
-    await fsp.readFile(makeLocalizationFilePathFromLang("en"), {
-      encoding: "utf8"
-    })
-  );
+const getDefaultLocalization = () =>
+  fsp.readFile(makeLocalizationFilePathFromLang("en"), { encoding: "utf8" });
 
 const makeLocalizationFilePathFromLang = lang =>
-  path.join(__dirname, "static", "localization", lang + ".yml");
+  path.join(__dirname, "static", "localization", "json", lang + ".json");
