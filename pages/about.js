@@ -2,9 +2,8 @@ import React from "react";
 import Layout from "../components/Layout";
 import Separator from "../components/Separator";
 import { colors } from "../utils/constants";
-import localization from "../utils/Localization";
-import globalGetInitialProps from "../utils/getInitialProps";
 import getInitialProps from "../utils/getInitialProps";
+import Localization from "../utils/Localization";
 
 const Portrait = () => (
   <img
@@ -50,26 +49,8 @@ const LongDescription = () => (
       color: colors.text.default,
       textAlign: "justify"
     }}
-  >
-    <p>
-      It actually sounds nice and reassuring. The fact that code can never lie.
-      That a computer executes exactly what we ask it to, and to fix a bug or
-      add a feature, we can just read the pertinent files and lines of code and
-      be done with it.
-    </p>
-    <p>
-      However, this can rarely be accomplished by rushing the keyboard and
-      coding the first thing that comes to mind, as the developer that has to
-      work with your code; or even yourself after a couple of weeks, will be
-      received by a web of lies and deception of a lazily written program.
-    </p>
-    <p>
-      <b>My goal</b> is to keep learning about the best practices to write
-      robust, human friendly code while preaching to my peers what I have
-      learned throughout these years about <b>Clean Code</b> and being a{" "}
-      <b>Clean Coder</b>.
-    </p>
-  </div>
+    dangerouslySetInnerHTML={{__html: Localization.getString('about.long_description')}}
+  />
 );
 
 const PersonalDataElement = ({ label, value }) => (
