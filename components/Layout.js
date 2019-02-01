@@ -69,10 +69,7 @@ const Content = ({ children }) => (
 
 const navbarSize = 43;
 
-export default ({ section, children, pathname, localization }) => {
-
-  Localization.set(localization)
-
+export default ({ section, children, pathname }) => {
   return (
     <React.Fragment>
       <CustomHead section={section} />

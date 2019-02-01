@@ -36,10 +36,10 @@ const SmallDescription = () => (
       color: colors.text.default,
       textAlign: "center"
     }}
-  >
-    <i>"Truth can only be found in one place: the code."</i> - Robert C. Martin,
-    Clean Code: A Handbook of Agile Software
-  </span>
+    dangerouslySetInnerHTML={{
+      __html: Localization.getString("about.small_description")
+    }}
+  />
 );
 
 const LongDescription = () => (
@@ -49,7 +49,9 @@ const LongDescription = () => (
       color: colors.text.default,
       textAlign: "justify"
     }}
-    dangerouslySetInnerHTML={{__html: Localization.getString('about.long_description')}}
+    dangerouslySetInnerHTML={{
+      __html: Localization.getString("about.long_description")
+    }}
   />
 );
 
@@ -67,17 +69,20 @@ const PersonalDataElement = ({ label, value }) => (
 
 const PersonalData = () => (
   <div style={{ color: colors.text.default, width: "100%" }}>
-    <PersonalDataElement label="Birthday" value="26/10/93" />
+    <PersonalDataElement label={Localization.getString('about.birthday')} value="26/10/93" />
     <Separator.Space amount={5} />
-    <PersonalDataElement label="Nationality" value="Argentinian" />
+    <PersonalDataElement label={Localization.getString('about.nationality')} value={Localization.getString('about.argentinian')} />
     <Separator.Space amount={5} />
-    <PersonalDataElement label="Email" value="zavaliafernando@gmail.com" />
+    <PersonalDataElement label={Localization.getString('about.email')} value="zavaliafernando@gmail.com" />
   </div>
 );
 
 const AboutPage = ({ pathname, localization }) => {
+
+  Localization.set(localization)
+
   return (
-    <Layout section="About" pathname={pathname} localization={localization}>
+    <Layout section={Localization.getString('about.about')} pathname={pathname}>
       <div
         style={{
           display: "flex",
