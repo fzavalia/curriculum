@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 import Separator from "../components/Separator";
 import { colors } from "../utils/constants";
 import getInitialProps from "../utils/getInitialProps";
+import Localization from "../utils/Localization";
 
 const Element = ({ image, name }) => (
   <div className="col-md-2 col-sm-6 col-xs-4">
@@ -61,11 +62,14 @@ const Title = ({ value }) => (
 );
 
 const TechPage = ({ pathname, localization }) => {
+
+  Localization.set(localization);
+
   return (
     <React.Fragment>
-      <Layout section="Tech" pathname={pathname} localization={localization}>
+      <Layout section="Tech" pathname={pathname}>
         <Separator.Space amount={60} />
-        <Title value="Currently working with:" />
+        <Title value={Localization.getString('tech.currently_working_with')} />
         <Separator.Space amount={40} />
         <div className="row">
           <Element image="/static/img/tech/js.png" name="JavaScript" />
@@ -80,7 +84,7 @@ const TechPage = ({ pathname, localization }) => {
           <Element image="/static/img/tech/mariadb.png" name="MariaDB" />
         </div>
         <Separator.Line amount={160} />
-        <Title value="Experienced with:" />
+        <Title value={Localization.getString('tech.experienced_with')} />
         <Separator.Space amount={40} />
         <div className="row">
           <Element image="/static/img/tech/csharp.png" name="C#" />

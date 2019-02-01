@@ -17,11 +17,83 @@ about.long_description: >
     learned throughout these years about <b>Clean Code</b> and being a
     <b>Clean Coder</b>.
   </p>
-about.small_description: > 
-  <i>"Truth can only be found in one place: the code."</i> - Robert C. Martin, Clean Code: A Handbook of Agile Software
+about.small_description: >-
+  "<i>\"Truth can only be found in one place: the code.\"</i> - Robert C. Martin, Clean Code: A Handbook of Agile Software"
 about.birthday: Birthday
 about.nationality: Nationality
 about.email: Email
 about.argentinian: Argentinian
 about.about: About
-  
+
+career.element.flowlike: >
+  <span>Lead Front Developer | FullStack</span>
+  <p>
+    Decided to test myself with a leadership role of a small team.
+    With all decisions, concerning the frontend of our applications
+    going through my person, I can finally transmit what I learned
+    this past years to people who were at my same rookie position on
+    days past.
+  </p>
+  <p>
+    Given the status of "Startup" the company has, and the increased
+    amount of responsibilities the small team has to handle, I could
+    prove myself successfully in the backend and infrastructure.
+  </p>
+career.element.etermax: >
+  <span>Software Engineer</span>
+  <p>
+    Started developing one of the company's games in Unity until I
+    was relocated to the <b>Platform Team</b>, dedicated to develop
+    services and tools for other teams in the company.
+  </p>
+  <p>
+    My two biggest projects consisted of; a dependency manager for
+    Unity in which code and libraries could be distributed and
+    versioned for everyone; and an Ad service which eased the
+    implementation of various Ad networks, increasing revenue
+    through ads.
+  </p>
+  <p>
+    I'm thankful to this firm for the exponential growth I could
+    show through my time there. Learning and implementing TDD, DDD,
+    microservices, functional programming, etc. As well as starting
+    my career as a Clean Code enthusiast.
+  </p>
+career.element.mpforce: >
+  <span>Game Designer | Game Developer</span>
+  <p>
+    Started as a Co-Game Designer and Level designer for the game
+    Dragon Ninjas. It was here, in this company that my career as a
+    developer flourished. One day I asked my boss if I could start
+    taking some projects as a Programmer and ended up developing
+    <a
+      style="color: white;"
+      href="https://play.google.com/store/apps/details?id=com.mpforce.once"
+    >
+      Once
+    </a>
+    for Disney and
+    <a
+      style="color: white;"
+      href="https://www.mangahigh.com/en-us/games/iceicemaybe"
+    >
+      Ice Ice Maybe
+    </a>
+    for MangaHigh
+  </p>
+career.element.vostu: >
+  <span>Game Designer | Game Developer | QA</span>
+  <p>
+    Where my career in the industry started. Started as an intern,
+    did some QA, fixed some bugs, brainstormed, helped with the
+    design and configured the main games of the company at that
+    moment: Dragon Ninjas and Top Farm.
+  </p>
+career.present: Present
+
+navbar.about: About
+navbar.career: Career
+navbar.tech: Tech
+
+tech.currently_working_with: "Currently working with"
+tech.experienced_with: "Experienced with:"

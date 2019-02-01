@@ -2,11 +2,12 @@ import React from "react";
 import Link from "next/link";
 import classNames from "classnames";
 import { colors } from "../utils/constants";
+import Localization from "../utils/Localization";
 
-const navbarRoutes = [
-  { path: "/about", label: "About" },
-  { path: "/career", label: "Career" },
-  { path: "/tech", label: "Tech" }
+const navbarRoutes = () => [
+  { path: "/about", label: Localization.getString("navbar.about") },
+  { path: "/career", label: Localization.getString("navbar.career") },
+  { path: "/tech", label: Localization.getString("navbar.tech") }
 ];
 
 const NavbarButtonArrow = () => (
@@ -67,7 +68,7 @@ const NavbarButton = ({ label, active, path }) => {
 
 const NavbarButtons = ({ pathname }) => (
   <div style={{ display: "flex", justifyContent: "space-between", padding: 8 }}>
-    {navbarRoutes.map(route => (
+    {navbarRoutes().map(route => (
       <NavbarButton
         key={route.path}
         path={route.path}
