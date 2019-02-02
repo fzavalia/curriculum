@@ -25,13 +25,11 @@ const BGImage = () => (
       div {
         position: fixed;
         background-image: url("/static/img/app/bg.jpg");
-        filter: blur(8px);
         height: 100%;
         width: 100%;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        transform: scale(1.1);
       }
     `}</style>
   </React.Fragment>
