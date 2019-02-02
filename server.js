@@ -1,6 +1,5 @@
 const express = require("express");
 const next = require("next");
-const fs = require("fs");
 const loadLocalization = require("./static/localization/loadLocalization");
 
 const nextApp = next({ dev: process.env.NODE_ENV !== "production" });
@@ -26,7 +25,8 @@ nextApp.prepare().then(() => {
 });
 
 const getlocalizationHandler = (req, res) => {
-  res.send(recursivellyGetLanglocalization(req.query.langs.split(','), res));
+  const langs = req.query.langs.split(",");
+  res.send(recursivellyGetLanglocalization(langs, res));
 };
 
 const recursivellyGetLanglocalization = (langs, res, index = 0) =>
