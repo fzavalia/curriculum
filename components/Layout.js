@@ -2,7 +2,7 @@ import Head from "next/head";
 import Navbar from "./Navbar";
 import FadeIn from "./FadeIn";
 import Separator from "./Separator";
-import Localization from "../utils/Localization";
+import Localization from "../utils/localization";
 
 const CustomHead = ({ section }) => (
   <Head>

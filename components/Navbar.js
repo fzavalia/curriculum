@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import classNames from "classnames";
 import { colors } from "../utils/constants";
-import Localization from "../utils/Localization";
+import Localization from "../utils/localization";
 
 const navbarRoutes = () => [
   { path: "/about", label: Localization.getString("navbar.about") },

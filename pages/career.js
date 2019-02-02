@@ -3,7 +3,7 @@ import Layout from "../components/Layout";
 import Separator from "../components/Separator";
 import { colors } from "../utils/constants";
 import getInitialProps from "../utils/getInitialProps";
-import Localization from "../utils/Localization";
+import Localization from "../utils/localization";
 
 const Element = ({ image, name, dates, description }) => (
   <div style={{ display: "flex", width: "100%" }}>

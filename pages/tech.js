@@ -3,7 +3,7 @@ import Layout from "../components/Layout";
 import Separator from "../components/Separator";
 import { colors } from "../utils/constants";
 import getInitialProps from "../utils/getInitialProps";
-import Localization from "../utils/Localization";
+import Localization from "../utils/localization";
 
 const Element = ({ image, name }) => (
   <div className="col-md-2 col-sm-6 col-xs-4">
