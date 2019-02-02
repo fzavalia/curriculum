@@ -1,12 +1,13 @@
 import { Component } from "react";
+import getConfig from "next/config";
 
-const trackID = "UA-133674055-1";
+const trackID = () => getConfig().publicRuntimeConfig.gaTrackId;
 
 export const GAHeadElement = () => (
   <div>
     <script
       async
-      src={"https://www.googletagmanager.com/gtag/js?id=" + trackID}
+      src={"https://www.googletagmanager.com/gtag/js?id=" + trackID()}
     />
     <script
       dangerouslySetInnerHTML={{
@@ -14,7 +15,7 @@ export const GAHeadElement = () => (
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', '${trackID}', { 'send_page_view': false });
+gtag('config', '${trackID()}', { 'send_page_view': false });
 `
       }}
     />
@@ -22,9 +23,7 @@ gtag('config', '${trackID}', { 'send_page_view': false });
 );
 
 export class PageView extends Component {
-  componentDidMount = () => {
-    console.log(process.env)
-    window.gtag("config", trackID, { page_path: this.props.pathname });
-  };
+  componentDidMount = () =>
+    window.gtag("config", trackID(), { page_path: this.props.pathname });
   render = () => <div />;
 }

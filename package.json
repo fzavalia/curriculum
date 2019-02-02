@@ -14,7 +14,7 @@
     "rimraf": "^2.6.3"
   },
   "scripts": {
-    "dev": "nodemon -w ./server -e js -e yml ./server/index.js",
+    "dev": "nodemon -w ./next.config.js -w ./server -e js -e yml ./server/index.js",
     "build": "next build",
     "start": "cross-env NODE_ENV=production node ./server/index.js"
   },
