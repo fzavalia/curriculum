@@ -25,8 +25,9 @@ nextApp.prepare().then(() => {
   });
 });
 
-const getlocalizationHandler = (req, res) =>
-  res.send(recursivellyGetLanglocalization(req.query.langs, res));
+const getlocalizationHandler = (req, res) => {
+  res.send(recursivellyGetLanglocalization(req.query.langs.split(','), res));
+};
 
 const recursivellyGetLanglocalization = (langs, res, index = 0) =>
   index >= langs.length

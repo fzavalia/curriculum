@@ -1,99 +1,97 @@
 about.long_description: >
   <p>
-    It actually sounds nice and reassuring. The fact that code can never lie.
-    That a computer executes exactly what we ask it to, and to fix a bug or
-    add a feature, we can just read the pertinent files and lines of code and
-    be done with it.
+    Suena agradable y tranquilizador. El hecho de que el código nunca puede mentir.
+    Que una computadora ejecuta exactamente lo que le pedimos, y para corregir un error o
+    agregar un nuevo requerimiento, con solo leer los archivos y líneas de código pertinentes 
+    ya es suficiente.
   </p>
   <p>
-    However, this can rarely be accomplished by rushing the keyboard and
-    coding the first thing that comes to mind, as the developer that has to
-    work with your code; or even yourself after a couple of weeks, will be
-    received by a web of lies and deception of a lazily written program.
+    Sin embargo, esto rara vez se puede lograr codeando sin estrategia y con el solo
+    proposito de que las cosas funcionen, ya que el proximo desarrollador que deba 
+    trabajar con ese codigo; o incluso uno mismo luego de unas pocas semanas, será
+    recibido por una red de mentiras y engaño de un programa perezosamente diseñado.
   </p>
   <p>
-    <b>My goal</b> is to keep learning about the best practices to write
-    robust, human friendly code while preaching to my peers what I have
-    learned throughout these years about <b>Clean Code</b> and being a
-    <b>Clean Coder</b>.
+    <b>Mi Objectivo</b> es el de seguir aprendiendo sobre las mejores practicas para 
+    escribir codigo mas robusto y humanamente entendible posible mientras pueda enseñarle
+    a mis compañeros sobre todo lo que fui aprendiendo estos años sobre <b>Clean Code</b> 
+    y ser un <b>Clean Coder</b>.
   </p>
 about.small_description: >-
-  "<i>\"Truth can only be found in one place: the code.\"</i> - Robert C. Martin, Clean Code: A Handbook of Agile Software"
-about.birthday: Birthday
-about.nationality: Nationality
+  <i>"La verdad solo existe en un solo lugar: El código."</i> - Robert C. Martin, Clean Code: A Handbook of Agile Software
+about.birthday: Fecha de Nacimiento
+about.nationality: Nacionalidad
 about.email: Email
-about.argentinian: Argentinian
-about.about: About
+about.argentinian: Argentino
+about.about: Sobre Mí
 
 career.element.flowlike: >
   <span>Lead Front Developer | FullStack</span>
   <p>
-    Decided to test myself with a leadership role of a small team.
-    With all decisions, concerning the frontend of our applications
-    going through my person, I can finally transmit what I learned
-    this past years to people who were at my same rookie position on
-    days past.
+    Decidi probar trabajar en una empresa más chica donde mis deciciones
+    tuviecen un efecto con mayor impacto sobre el exito. Influyendo mayormente
+    en que tecnologias se deben utilizar para cumplir con los objetivos del equipo.
+    Esta vez con la posibilidad de poder transmitir los conocimientos
+    que aprendi durante todos estos años.
   </p>
   <p>
-    Given the status of "Startup" the company has, and the increased
-    amount of responsibilities the small team has to handle, I could
-    prove myself successfully in the backend and infrastructure.
+    Dado a que la empresa es considerada un 'Startup' y que la cantidad de tareas
+    es distribuida entre una menor cantidad de desarrolladores. Pude involucrarme
+    exitosamente como desarrollador fullstack.
   </p>
 career.element.etermax: >
   <span>Software Engineer</span>
   <p>
-    Started developing one of the company's games in Unity until I
-    was relocated to the <b>Platform Team</b>, dedicated to develop
-    services and tools for other teams in the company.
+    Comencé como desarrollador Unity hasta que luego de unos meses, gracias
+    a mi rendimiento, me transladaron al equipo de <b>Plataforma</b>, donde
+    me dediqué a desarrollar microservicios y utilidades para el resto de los
+    equipos.
   </p>
   <p>
-    My two biggest projects consisted of; a dependency manager for
-    Unity in which code and libraries could be distributed and
-    versioned for everyone; and an Ad service which eased the
-    implementation of various Ad networks, increasing revenue
-    through ads.
+    Hay 2 proyectos a destacar de los que fui participe principal. Un gestor de
+    dependencias para los proyectos desarrollados en Unity. Y una herramienta para
+    poder integrar de manera simple y directa, varios proveedores de publicidad, 
+    tambien para los juegos desarrollados en Unity.
   </p>
   <p>
-    I'm thankful to this firm for the exponential growth I could
-    show through my time there. Learning and implementing TDD, DDD,
-    microservices, functional programming, etc. As well as starting
-    my career as a Clean Code enthusiast.
+    Estoy sumamente agradecido a esta empresa ya que pude crecer enormemente como
+    desarrollador y como persona con gente que realmente sabe. Es aqui donde aprendi 
+    todo lo que se sobre TDD, DDD, Reactive Programming, programación funcional, 
+    orquestracion de servicios, entre otras.
   </p>
 career.element.mpforce: >
   <span>Game Designer | Game Developer</span>
   <p>
-    Started as a Co-Game Designer and Level designer for the game
-    Dragon Ninjas. It was here, in this company that my career as a
-    developer flourished. One day I asked my boss if I could start
-    taking some projects as a Programmer and ended up developing
+    Empecé como Co-Game Designer y level designer para el juego Dragon Ninjas.
+    Luego de unos meses dejando de lado el diseño, empecé a programar varios juegos
+    para distintos clientes. De los cuales destaco
     <a
       style="color: white;"
       href="https://play.google.com/store/apps/details?id=com.mpforce.once"
     >
       Once
     </a>
-    for Disney and
+    para Disney y
     <a
       style="color: white;"
       href="https://www.mangahigh.com/en-us/games/iceicemaybe"
     >
       Ice Ice Maybe
     </a>
-    for MangaHigh
+    para MangaHigh
   </p>
 career.element.vostu: >
   <span>Game Designer | Game Developer | QA</span>
   <p>
-    Where my career in the industry started. Started as an intern,
-    did some QA, fixed some bugs, brainstormed, helped with the
-    design and configured the main games of the company at that
-    moment: Dragon Ninjas and Top Farm.
+    Lugar donde mi carrera en la industria comenzó. Empezando como pasante con tareas
+    de QA y Level Designer, pude posteriormente involucrarme directamente como Game Designer
+    en varios proyectos full-time.
   </p>
-career.present: Present
+career.present: Presente
 
-navbar.about: About
-navbar.career: Career
-navbar.tech: Tech
+navbar.about: Sobre Mí
+navbar.career: Carrera
+navbar.tech: Tecnologias
 
-tech.currently_working_with: "Currently working with"
-tech.experienced_with: "Experienced with:"
+tech.currently_working_with: "Trabajando con:"
+tech.experienced_with: "Experimentado en:"

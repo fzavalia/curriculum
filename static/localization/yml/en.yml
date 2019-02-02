@@ -17,8 +17,7 @@ about.long_description: >
     learned throughout these years about <b>Clean Code</b> and being a
     <b>Clean Coder</b>.
   </p>
-about.small_description: >-
-  "<i>\"Truth can only be found in one place: the code.\"</i> - Robert C. Martin, Clean Code: A Handbook of Agile Software"
+about.small_description: "<i>'Truth can only be found in one place: the code.'</i> - Robert C. Martin, Clean Code: A Handbook of Agile Software"
 about.birthday: Birthday
 about.nationality: Nationality
 about.email: Email
