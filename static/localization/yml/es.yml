@@ -7,13 +7,13 @@ about.long_description: >
   </p>
   <p>
     Sin embargo, esto rara vez se puede lograr codeando sin estrategia y con el solo
-    proposito de que las cosas funcionen, ya que el proximo desarrollador que deba 
-    trabajar con ese codigo; o incluso uno mismo luego de unas pocas semanas, será
+    propósito de que las cosas funcionen, ya que el próximo desarrollador que deba 
+    trabajar con ese código; o incluso uno mismo luego de unas pocas semanas, será
     recibido por una red de mentiras y engaño de un programa perezosamente diseñado.
   </p>
   <p>
-    <b>Mi Objectivo</b> es el de seguir aprendiendo sobre las mejores practicas para 
-    escribir codigo mas robusto y humanamente entendible posible mientras pueda enseñarle
+    <b>Mi Objetivo</b> es el de seguir aprendiendo sobre las mejores practicas para 
+    escribir código mas robusto y humanamente entendible posible mientras pueda enseñarle
     a mis compañeros sobre todo lo que fui aprendiendo estos años sobre <b>Clean Code</b> 
     y ser un <b>Clean Coder</b>.
   </p>
@@ -28,11 +28,11 @@ about.about: Sobre Mí
 career.element.flowlike: >
   <span>Lead Front Developer | FullStack</span>
   <p>
-    Decidi probar trabajar en una empresa más chica donde mis deciciones
-    tuviecen un efecto con mayor impacto sobre el exito. Influyendo mayormente
-    en que tecnologias se deben utilizar para cumplir con los objetivos del equipo.
+    Decidí probar trabajar en una empresa más chica donde mis decisiones
+    tuvieren un efecto con mayor impacto sobre el éxito. Influyendo mayormente
+    en que tecnologías se deben utilizar para cumplir con los objetivos del equipo.
     Esta vez con la posibilidad de poder transmitir los conocimientos
-    que aprendi durante todos estos años.
+    que aprendí durante todos estos años.
   </p>
   <p>
     Dado a que la empresa es considerada un 'Startup' y que la cantidad de tareas
@@ -43,7 +43,7 @@ career.element.etermax: >
   <span>Software Engineer</span>
   <p>
     Comencé como desarrollador Unity hasta que luego de unos meses, gracias
-    a mi rendimiento, me transladaron al equipo de <b>Plataforma</b>, donde
+    a mi rendimiento, me trasladaron al equipo de <b>Plataforma</b>, donde
     me dediqué a desarrollar microservicios y utilidades para el resto de los
     equipos.
   </p>
@@ -51,13 +51,13 @@ career.element.etermax: >
     Hay 2 proyectos a destacar de los que fui participe principal. Un gestor de
     dependencias para los proyectos desarrollados en Unity. Y una herramienta para
     poder integrar de manera simple y directa, varios proveedores de publicidad, 
-    tambien para los juegos desarrollados en Unity.
+    también para los juegos desarrollados en Unity.
   </p>
   <p>
     Estoy sumamente agradecido a esta empresa ya que pude crecer enormemente como
-    desarrollador y como persona con gente que realmente sabe. Es aqui donde aprendi 
+    desarrollador y como persona con gente que realmente sabe. Es aquí donde aprendí 
     todo lo que se sobre TDD, DDD, Reactive Programming, programación funcional, 
-    orquestracion de servicios, entre otras.
+    orquestración de servicios, entre otras.
   </p>
 career.element.mpforce: >
   <span>Game Designer | Game Developer</span>
@@ -91,7 +91,7 @@ career.present: Presente
 
 navbar.about: Sobre Mí
 navbar.career: Carrera
-navbar.tech: Tecnologias
+navbar.tech: Tecnologías
 
 tech.currently_working_with: "Trabajando con:"
 tech.experienced_with: "Experimentado en:"
