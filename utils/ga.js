@@ -1,29 +1,34 @@
 import { Component } from "react";
 import getConfig from "next/config";
 
-const trackID = () => getConfig().publicRuntimeConfig.gaTrackId;
+const getGaTrackId = () => getConfig().publicRuntimeConfig.gaTrackId;
 
-export const GAHeadElement = () => (
-  <div>
-    <script
-      async
-      src={"https://www.googletagmanager.com/gtag/js?id=" + trackID()}
-    />
-    <script
-      dangerouslySetInnerHTML={{
-        __html: `
+const isGaTrackIdConfigured = () => Boolean(getGaTrackId());
+
+export const GAHeadElement = () =>
+  isGaTrackIdConfigured() && (
+    <div>
+      <script
+        async
+        src={"https://www.googletagmanager.com/gtag/js?id=" + getGaTrackId()}
+      />
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', '${trackID()}', { 'send_page_view': false });
+gtag('config', '${getGaTrackId()}', { 'send_page_view': false });
 `
-      }}
-    />
-  </div>
-);
+        }}
+      />
+    </div>
+  );
 
 export class PageView extends Component {
   componentDidMount = () =>
-    window.gtag("config", trackID(), { page_path: this.props.pathname });
-  render = () => <div />;
+    isGaTrackIdConfigured() &&
+    window.gtag("config", getGaTrackId(), { page_path: this.props.pathname });
+
+  render = () => null;
 }
