@@ -79,16 +79,14 @@ export default ({ section, children, pathname }) => {
       <Content>
         <Navbar pathname={pathname} />
         <Separator.Space amount={navbarSize} />
-        <FadeIn>
-          <div
-            style={{
-              height: `calc(100vh - ${navbarSize}px)`,
-              overflowY: "auto"
-            }}
-          >
-            <div style={{ width: "90%", maxWidth: 700, margin: "auto" }}>
-              {children}
-            </div>
+        <FadeIn
+          style={{
+            height: `calc(100vh - ${navbarSize}px)`,
+            overflowY: "auto"
+          }}
+        >
+          <div style={{ width: "90%", maxWidth: 700, margin: "auto" }}>
+            {children}
           </div>
         </FadeIn>
       </Content>

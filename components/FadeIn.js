@@ -1,6 +1,6 @@
-export default ({ children }) => (
+export default ({ children, style }) => (
   <React.Fragment>
-    <div>{children}</div>
+    <div style={style || {}}>{children}</div>
     <style jsx>{`
       div {
         animation: fadein 1s;
