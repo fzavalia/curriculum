@@ -12,6 +12,7 @@ COPY pages pages
 COPY static static
 COPY utils utils
 COPY server server
+COPY next.config.js .
 
 RUN yarn build
 
