@@ -25,17 +25,8 @@ nextApp.prepare().then(() => {
 });
 
 const getlocalizationHandler = (req, res) => {
-  const langs = req.query.langs.split(",");
-  res.send(recursivellyGetLanglocalization(langs, res));
+  const lang = req.query.lang;
+  res.send(localization[lang] || getDefaultLocalization());
 };
-
-const recursivellyGetLanglocalization = (langs, res, index = 0) =>
-  index >= langs.length
-    ? getDefaultLocalization()
-    : handleLocalizationLangExistence(langs, res, index);
-
-const handleLocalizationLangExistence = (langs, res, index) =>
-  localization[langs[index]] ||
-  recursivellyGetLanglocalization(langs, res, index + 1);
 
 const getDefaultLocalization = () => localization["en"];
