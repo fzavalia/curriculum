@@ -1,6 +1,6 @@
 const express = require("express");
 const next = require("next");
-const loadLocalization = require("./static/localization/loadLocalization");
+const loadLocalization = require("./localization/loadLocalization");
 
 const nextApp = next({ dev: process.env.NODE_ENV !== "production" });
 const nextHandler = nextApp.getRequestHandler();
