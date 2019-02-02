@@ -87,7 +87,7 @@ const CareerPage = ({ pathname, localization }) => {
         <Element
           image="/static/img/career/mpforce.jpg"
           name="MP Force"
-          dates="01/08/15 - 01/02/2017"
+          dates="01/08/15 - 01/02/17"
           description={
             <div
               dangerouslySetInnerHTML={{
