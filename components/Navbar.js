@@ -55,10 +55,10 @@ const NavbarButton = ({ label, active, path }) => {
           transition: 500ms;
         }
         .not-active:hover {
-          background-color: #ffffff1c;
+          background-color: rgba(255, 255, 255, 0.11);;
         }
         .active {
-          background-color: #ffffff1c;
+          background-color: rgba(255, 255, 255, 0.11);;
         }
       `}</style>
       {active && <NavbarButtonArrow />}
