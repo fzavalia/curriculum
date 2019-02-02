@@ -26,6 +26,8 @@ const NavbarButtonArrow = () => (
   </div>
 );
 
+const navbarButtonActiveBackgroundColor = "rgba(255, 255, 255, 0.11)";
+
 const NavbarButton = ({ label, active, path }) => {
   return (
     <div style={{ flex: 1, position: "relative" }}>
@@ -55,10 +57,10 @@ const NavbarButton = ({ label, active, path }) => {
           transition: 500ms;
         }
         .not-active:hover {
-          background-color: rgba(255, 255, 255, 0.11);;
+          background-color: ${navbarButtonActiveBackgroundColor};
         }
         .active {
-          background-color: rgba(255, 255, 255, 0.11);;
+          background-color: ${navbarButtonActiveBackgroundColor};
         }
       `}</style>
       {active && <NavbarButtonArrow />}
