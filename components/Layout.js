@@ -1,8 +1,8 @@
+import { Component } from "react";
 import Head from "next/head";
 import Navbar from "./Navbar";
 import FadeIn from "./FadeIn";
 import Separator from "./Separator";
-import Localization from "../utils/localization";
 
 const CustomHead = ({ section }) => (
   <Head>
@@ -14,6 +14,21 @@ const CustomHead = ({ section }) => (
     />
     <link rel="stylesheet" href="/static/css/flexboxgrid.min.css" />
     <link rel="shortcut icon" href="/static/favicon.ico" />
+    {/* <!-- Global Site Tag (gtag.js) - Google Analytics --> */}
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-133674055-1"
+    />
+    <script
+      dangerouslySetInnerHTML={{
+        __html: `
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-133674055-1', { 'send_page_view': false });
+`
+      }}
+    />
   </Head>
 );
 
@@ -69,10 +84,20 @@ const Content = ({ children }) => (
 
 const navbarSize = 43;
 
+class PageView extends Component {
+  componentDidMount = () => {
+    window.gtag("config", "UA-133674055-1", { page_path: this.props.pathname });
+  };
+  // componentWillMount = () => console.log('componentWillMount')
+  // componentWillUpdate = () => console.log('componentWillUpdate')
+  render = () => null;
+}
+
 export default ({ section, children, pathname }) => {
   return (
     <React.Fragment>
       <CustomHead section={section} />
+      <PageView pathname={pathname} />
       <BGImage />
       <BGImageCover />
       <GlobalStyles />
