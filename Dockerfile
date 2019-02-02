@@ -11,7 +11,7 @@ COPY components components
 COPY pages pages
 COPY static static
 COPY utils utils
-COPY server.js .
+COPY server server
 
 RUN yarn build
 
