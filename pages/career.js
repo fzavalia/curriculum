@@ -57,7 +57,7 @@ const CareerPage = ({ pathname, localization }) => {
           flexDirection: "column"
         }}
       >
-        <Separator.Space amount={60} />
+        <Separator.Space amount={50} />
         <Element
           image="/static/img/career/flowlike.jpg"
           name="Flowlike"
