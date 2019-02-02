@@ -1,5 +1,4 @@
 import axios from "axios";
-import Localization from "./Localization";
 
 export default async ({ pathname, req }) => ({
   pathname,
@@ -7,9 +6,7 @@ export default async ({ pathname, req }) => ({
 });
 
 const getLocalization = async req =>
-  !Localization.isReady()
-    ? await fetchLocalization(getLocalizationLangFromRequest(req))
-    : Localization.get();
+  req && (await fetchLocalization(getLocalizationLangFromRequest(req)));
 
 const fetchLocalization = lang =>
   axios
