@@ -19,15 +19,17 @@ const Portrait = () => (
 );
 
 const Name = () => (
-  <span
+  <h2
     style={{
-      fontSize: 20,
-      color: colors.text.default
+      color: colors.text.default,
+      margin: 0
     }}
   >
     Fernando Alberto Zavalia Paunero
-  </span>
+  </h2>
 );
+
+const Profession = () => <p style={{ color: colors.text.default }}>{Localization.getString('about.profession')}</p>
 
 const SmallDescription = () => (
   <span
@@ -92,15 +94,15 @@ const AboutPage = ({ pathname, localization }) => {
       >
         <Separator.Space amount={60} />
         <Portrait />
-        <Separator.Line amount={60} />
+        <Separator.Line amount={50} />
         <Name />
-        <Separator.Space amount={20} />
+        <Profession />
         <SmallDescription />
-        <Separator.Line amount={60} />
+        <Separator.Line amount={50} />
         <LongDescription />
-        <Separator.Line amount={60} />
+        <Separator.Line amount={50} />
         <PersonalData />
-        <Separator.Space amount={40} />
+        <Separator.Space amount={20} />
       </div>
     </Layout>
   );
